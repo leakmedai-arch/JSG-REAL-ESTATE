@@ -84,7 +84,7 @@ const PERMANENT_VIDEO_SRC = '/construction.mp4';
 export const ConstructionScrollExperience: React.FC<ConstructionScrollExperienceProps> = ({ 
   onNavigate
 }) => {
-  const { sections } = useSiteData();
+  const { sections, tables } = useSiteData();
   const containerRef = useRef<HTMLDivElement>(null);
   const viewportRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -101,10 +101,11 @@ export const ConstructionScrollExperience: React.FC<ConstructionScrollExperience
   const durationRef = useRef<number>(10);
   const audioCtxRef = useRef<AudioContext | null>(null);
 
-  const activeVideoSrc = sections.constructionVideoUrl || PERMANENT_VIDEO_SRC;
+  const scrollVideoRow = tables?.jsg_scroll_video?.[0];
+  const activeVideoSrc = scrollVideoRow?.video_url || sections.constructionVideoUrl || PERMANENT_VIDEO_SRC;
   const experienceData = sections?.constructionExperience || {};
   const preHeadingText = experienceData.preHeading || 'Architectural Genesis · Dubai';
-  const headingText = experienceData.heading || 'Witness Masterpiece Realization';
+  const headingText = scrollVideoRow?.overlay_text || experienceData.heading || 'Witness Masterpiece Realization';
   const descriptionText = experienceData.description || 'Scroll down to advance structural engineering forward; scroll up to reverse the physical assembly timeline.';
 
   // Check prefers-reduced-motion

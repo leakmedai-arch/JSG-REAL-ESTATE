@@ -1,4 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { motion } from 'motion/react';
+import { fadeDown } from '../lib/animations';
 import { 
   Building2, 
   MapPin, 
@@ -204,7 +206,12 @@ export const SmartHeader: React.FC<SmartHeaderProps> = ({ currentPath, onNavigat
       </div>
 
       {/* Sleek Ultra-Slim Floating Header Container with Pill/Capsule Corners (Border-Radius: 50px) */}
-      <header className="sticky top-0 z-50 pt-2 pb-2.5 px-2 sm:px-4 lg:px-6 w-full bg-gradient-to-b from-[#112923] via-[#0c1c18]/85 to-transparent pointer-events-none transition-all duration-300">
+      <motion.header 
+        initial="hidden"
+        animate="visible"
+        variants={fadeDown}
+        className="sticky top-0 z-50 pt-2 pb-2.5 px-2 sm:px-4 lg:px-6 w-full bg-gradient-to-b from-[#112923] via-[#0c1c18]/85 to-transparent pointer-events-none transition-all duration-300"
+      >
         <div 
           ref={headerRef}
           onMouseMove={handleMouseMove}
@@ -898,7 +905,7 @@ export const SmartHeader: React.FC<SmartHeaderProps> = ({ currentPath, onNavigat
           </button>
         </div>
       </div>
-    </header>
+    </motion.header>
 
       {/* MOBILE FULL-SCREEN SOPHISTICATED DRAWER */}
       {mobileMenuOpen && (

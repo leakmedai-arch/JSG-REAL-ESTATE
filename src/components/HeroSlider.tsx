@@ -105,7 +105,23 @@ interface HeroSliderProps {
 }
 
 export const HeroSlider: React.FC<HeroSliderProps> = ({ onNavigate }) => {
-  const { sections } = useSiteData();
+  const { sections, tables } = useSiteData();
+  const dbSlides = tables?.jsg_hero_slider;
+  const activeSlides = (dbSlides && dbSlides.length > 0) ? dbSlides.map((s: any, idx: number) => ({
+    id: s.id || idx + 1,
+    tagline: s.subtitle || 'LUXURY REAL ESTATE',
+    headline: s.title || 'Dubai Trophy Properties',
+    subheadline: s.subtitle || 'Exclusive Waterfront & Palm Jumeirah Estates',
+    propertyTitle: s.title || 'Signature Residence',
+    location: s.location || 'Dubai',
+    price: s.price || 'AED 10,000,000',
+    stats: s.stats || 'Prime Luxury',
+    image: s.image_url || 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=3840&q=95',
+    category: s.category || 'Luxury',
+    buttonTitle: s.cta1_text || 'Explore Properties',
+    ctaPath: s.cta1_link || '/buy'
+  })) : SLIDES;
+
   const [currentSlide, setCurrentSlide] = useState(0);
   const [searchTab, setSearchTab] = useState<'buy' | 'rent' | 'off-plan'>('buy');
   const [keyword, setKeyword] = useState('');
@@ -130,18 +146,18 @@ export const HeroSlider: React.FC<HeroSliderProps> = ({ onNavigate }) => {
   // Continuous automatic slide advance
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentSlide((curr) => (curr + 1) % SLIDES.length);
+      setCurrentSlide((curr) => (curr + 1) % activeSlides.length);
     }, SLIDE_DURATION);
 
     return () => clearInterval(timer);
-  }, []);
+  }, [activeSlides.length]);
 
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % SLIDES.length);
+    setCurrentSlide((prev) => (prev + 1) % activeSlides.length);
   };
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + SLIDES.length) % SLIDES.length);
+    setCurrentSlide((prev) => (prev - 1 + activeSlides.length) % activeSlides.length);
   };
 
   const handleTouchStart = (e: React.TouchEvent) => {
@@ -182,7 +198,7 @@ export const HeroSlider: React.FC<HeroSliderProps> = ({ onNavigate }) => {
     }
   };
 
-  const slide = SLIDES[currentSlide];
+  const slide = activeSlides[currentSlide] || activeSlides[0];
 
   return (
     <section 
@@ -192,7 +208,7 @@ export const HeroSlider: React.FC<HeroSliderProps> = ({ onNavigate }) => {
       onTouchEnd={handleTouchEnd}
     >
       {/* Background Image Layer with 8K Crisp Depth & Silky Crossfade */}
-      {SLIDES.map((s, index) => {
+      {activeSlides.map((s, index) => {
         const isActive = index === currentSlide;
         return (
           <div

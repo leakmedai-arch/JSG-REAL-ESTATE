@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { motion } from 'motion/react';
+import { fadeUp, staggerContainer, defaultViewport } from './lib/animations';
 import { 
   BrowserRouter, 
   Routes, 
@@ -42,12 +44,11 @@ import { WebsiteClonerSpec } from './components/WebsiteClonerSpec';
 import { Property } from './types/jsg';
 import jsgRawData from './jsgData.json';
 import { SiteDataProvider, useSiteData } from './context/SiteDataContext';
-import { AdminLogin } from './pages/admin/AdminLogin';
-import { AdminControlCenter } from './pages/admin/AdminControlCenter';
 import { DynamicPage } from './pages/DynamicPage';
 import { AIConciergeWidget } from './components/AIConciergeWidget';
 import { CurtainPreloader } from './components/CurtainPreloader';
 import { FloatingCursor } from './components/FloatingCursor';
+import { AdminControlCenter } from './pages/admin/AdminControlCenter';
 
 const data = jsgRawData as any;
 
@@ -64,10 +65,23 @@ function MainLayout() {
   const navigate = useNavigate();
   const location = useLocation();
   const [selectedProperty, setSelectedProperty] = useState<Property | null>(null);
-  const { settings } = useSiteData();
+  const { settings, tables } = useSiteData();
 
-  const footerData = settings?.footer || data.footer;
-  const contactData = settings?.contact || data.contact;
+  const footerRow = tables?.jsg_footer?.[0] || {};
+  const headerRow = tables?.jsg_header?.[0] || {};
+
+  const footerData = {
+    description: footerRow.about || settings?.footer?.description || data.footer.description,
+    copyright: footerRow.copyright_text || settings?.footer?.copyright || data.footer.copyright
+  };
+
+  const contactData = {
+    company: headerRow.company_name || settings?.contact?.company || data.contact.company,
+    location: footerRow.address || settings?.contact?.location || data.contact.location,
+    phone: footerRow.phone || settings?.contact?.phone || data.contact.phone,
+    email: footerRow.email || settings?.contact?.email || data.contact.email,
+    whatsapp: settings?.contact?.whatsapp || data.contact?.whatsapp
+  };
   const reraNum = settings?.reraLicense || '19284';
 
   return (
@@ -394,7 +408,13 @@ function MainLayout() {
       <AIConciergeWidget />
 
       {/* Global Luxury Footer - Slim, Clean, Responsive Deep Emerald, Rich Espresso & Royal Gold */}
-      <footer className="bg-[#0c241d] text-[#fbfaf7] border-t border-[#b58b4a]/30 mt-12 sm:mt-16 pt-8 sm:pt-10 pb-6 sm:pb-8">
+      <motion.footer 
+        initial="hidden"
+        whileInView="visible"
+        viewport={defaultViewport}
+        variants={fadeUp}
+        className="bg-[#0c241d] text-[#fbfaf7] border-t border-[#b58b4a]/30 mt-12 sm:mt-16 pt-8 sm:pt-10 pb-6 sm:pb-8"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 sm:space-y-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 pb-6 sm:pb-8 border-b border-[#b58b4a]/25">
             {/* Column 1: Brand & Licensing */}
@@ -489,7 +509,7 @@ function MainLayout() {
             </div>
           </div>
         </div>
-      </footer>
+      </motion.footer>
     </div>
   );
 }
@@ -499,9 +519,8 @@ export default function App() {
     <BrowserRouter>
       <SiteDataProvider>
         <Routes>
-          <Route path="/admin/login" element={<AdminLogin />} />
-          <Route path="/admin/*" element={<AdminControlCenter />} />
           <Route path="/admin" element={<AdminControlCenter />} />
+          <Route path="/admin/*" element={<AdminControlCenter />} />
           <Route path="/*" element={<MainLayout />} />
         </Routes>
       </SiteDataProvider>

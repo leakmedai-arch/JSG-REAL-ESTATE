@@ -621,11 +621,45 @@ class Database {
   private revisions: RevisionSnapshot[];
   private aiSettings: AISettings;
   private communityImages: Record<string, string>;
+  private tables: Record<string, any[]>;
   private lastUpdatedAt: string;
 
   constructor() {
     this.settings = safeReadJson<SiteSettings>('settings.json', DEFAULT_SETTINGS);
     this.sections = safeReadJson<SectionsConfig>('sections.json', DEFAULT_SECTIONS);
+    this.tables = {
+      jsg_header: safeReadJson('jsg_header.json', [{ id: '1', company_name: 'JSG Real Estate', tagline: 'Dubai Luxury Properties', logo_url: '/logo.png', logo_color: '#ffffff', tagline_color: '#d9bf8c', background_color: '#0d1e1a' }]),
+      jsg_nav_pages: safeReadJson('jsg_nav_pages.json', [
+        { id: '1', name: 'Home', link: '/', order_num: 1, active: true },
+        { id: '2', name: 'Buy', link: '/buy', order_num: 2, active: true },
+        { id: '3', name: 'Rent', link: '/rent', order_num: 3, active: true },
+        { id: '4', name: 'Communities', link: '/areas', order_num: 4, active: true },
+        { id: '5', name: 'Contact', link: '/contact', order_num: 5, active: true }
+      ]),
+      jsg_hero_slider: safeReadJson('jsg_hero_slider.json', [
+        { id: '1', title: 'The Pinnacle of Dubai Luxury Living', subtitle: 'Exclusive Waterfront & Palm Jumeirah Estates', image_url: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=2000&q=80', cta1_text: 'Explore Properties', cta1_link: '/buy', order_num: 1 }
+      ]),
+      jsg_founders: safeReadJson('jsg_founders.json', [
+        { id: '1', name: 'JSG Founder', designation: 'Managing Director & Principal', image_url: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80', bio: 'Over 20 years of bespoke real estate advisory in Dubai prime locations.', order_num: 1 }
+      ]),
+      jsg_listings: safeReadJson('jsg_listings.json', [
+        { id: '1', title: 'Palace Beach Residence', location: 'Emaar Beachfront', price: 'AED 14,500,000', image_url: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80', description: 'Ultra-luxury 4-bedroom penthouse with panoramic Arabian Gulf views.', order_num: 1 }
+      ]),
+      jsg_listing_images: safeReadJson('jsg_listing_images.json', []),
+      jsg_buildings: safeReadJson('jsg_buildings.json', [
+        { id: '1', name: 'Burj Crown', location: 'Downtown Dubai', image_url: 'https://images.unsplash.com/photo-1576485338530-3542f4e3415c?auto=format&fit=crop&w=1000&q=80', order_num: 1 }
+      ]),
+      jsg_communities: safeReadJson('jsg_communities.json', [
+        { id: '1', name: 'Palm Jumeirah', image_url: 'https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1000&q=80', description: 'World-renowned man-made island featuring ultra-prime beachfront villas.', order_num: 1 }
+      ]),
+      jsg_scroll_video: safeReadJson('jsg_scroll_video.json', [
+        { id: '1', video_url: 'https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-city-traffic-at-night-41718-large.mp4', overlay_text: 'The Art of Extraordinary Living in Dubai', active: true }
+      ]),
+      jsg_founder_slider: safeReadJson('jsg_founder_slider.json', []),
+      jsg_footer: safeReadJson('jsg_footer.json', [
+        { id: '1', address: 'Boulevard Plaza Tower 2, Downtown Dubai, UAE', phone: '+971 4 000 0000', email: 'vip@jsgrealestate.ae', about: 'JSG Real Estate is Dubai’s premier luxury advisory firm specializing in ultra-prime residential properties.', copyright_text: '© 2026 JSG Real Estate. All rights reserved.' }
+      ])
+    };
     
     // Ensure founder cards and slides are present
     if (!this.sections.showcaseSlides || this.sections.showcaseSlides.length === 0) {
@@ -1497,6 +1531,35 @@ class Database {
       ip
     });
     return true;
+  }
+
+  public getTable(table: string): any[] {
+    return this.tables[table] || [];
+  }
+
+  public upsertTableItem(table: string, item: any): any[] {
+    if (!this.tables[table]) {
+      this.tables[table] = [];
+    }
+    const id = item.id || crypto.randomUUID();
+    const newItem = { ...item, id };
+    const idx = this.tables[table].findIndex(i => i.id === id);
+    if (idx >= 0) {
+      this.tables[table][idx] = { ...this.tables[table][idx], ...newItem };
+    } else {
+      this.tables[table].push(newItem);
+    }
+    safeWriteJson(`${table}.json`, this.tables[table]);
+    this.bumpVersion();
+    return this.tables[table];
+  }
+
+  public deleteTableItem(table: string, id: string): any[] {
+    if (!this.tables[table]) return [];
+    this.tables[table] = this.tables[table].filter(i => i.id !== id);
+    safeWriteJson(`${table}.json`, this.tables[table]);
+    this.bumpVersion();
+    return this.tables[table];
   }
 }
 

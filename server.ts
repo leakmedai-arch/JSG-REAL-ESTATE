@@ -2,6 +2,8 @@ import express, { Request, Response } from 'express';
 import path from 'path';
 import fs from 'fs';
 import { createServer as createViteServer } from 'vite';
+import { createClient } from '@supabase/supabase-js';
+import multer from 'multer';
 import { db } from './server/db';
 import { 
   requireAuth, 
@@ -84,6 +86,19 @@ app.get('/api/content', (req: Request, res: Response) => {
       welcomeMessage: db.getAISettings().welcomeMessage,
       suggestedQuestions: db.getAISettings().suggestedQuestions,
       enableVoice: db.getAISettings().enableVoice
+    },
+    tables: {
+      jsg_header: db.getTable('jsg_header'),
+      jsg_nav_pages: db.getTable('jsg_nav_pages'),
+      jsg_hero_slider: db.getTable('jsg_hero_slider'),
+      jsg_scroll_video: db.getTable('jsg_scroll_video'),
+      jsg_founders: db.getTable('jsg_founders'),
+      jsg_founder_slider: db.getTable('jsg_founder_slider'),
+      jsg_listings: db.getTable('jsg_listings'),
+      jsg_listing_images: db.getTable('jsg_listing_images'),
+      jsg_buildings: db.getTable('jsg_buildings'),
+      jsg_communities: db.getTable('jsg_communities'),
+      jsg_footer: db.getTable('jsg_footer')
     }
   });
 });
@@ -986,6 +1001,132 @@ app.get('/sitemap.xml', (req: Request, res: Response) => {
 
   res.setHeader('Content-Type', 'application/xml');
   res.send(xml);
+});
+
+// ----------------------------------------------------
+// ADMIN CONTROL PANEL API ROUTES (SUPABASE + LOCAL FALLBACK)
+// ----------------------------------------------------
+
+const upload = multer({ storage: multer.memoryStorage() });
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
+const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '';
+const supabaseAdmin = supabaseUrl && supabaseServiceKey ? createClient(supabaseUrl, supabaseServiceKey) : null;
+
+const ALLOWED_TABLES = [
+  'jsg_header',
+  'jsg_nav_pages',
+  'jsg_hero_slider',
+  'jsg_scroll_video',
+  'jsg_founders',
+  'jsg_founder_slider',
+  'jsg_listings',
+  'jsg_listing_images',
+  'jsg_buildings',
+  'jsg_communities',
+  'jsg_footer'
+];
+
+app.get('/api/admin/:table', async (req: Request, res: Response) => {
+  const table = req.params.table;
+  if (!ALLOWED_TABLES.includes(table)) {
+    return res.status(400).json({ error: 'Invalid table' });
+  }
+
+  if (supabaseAdmin) {
+    try {
+      let result = await supabaseAdmin.from(table).select('*').order('order_num', { ascending: true });
+      if (result.error) {
+        result = await supabaseAdmin.from(table).select('*');
+      }
+      if (!result.error && result.data) {
+        return res.json(result.data);
+      }
+    } catch (err) {
+      console.warn(`Supabase fetch failed for ${table}, fallback to local:`, err);
+    }
+  }
+
+  const items = db.getTable(table);
+  return res.json(items);
+});
+
+app.post('/api/admin/:table', async (req: Request, res: Response) => {
+  const table = req.params.table;
+  if (!ALLOWED_TABLES.includes(table)) {
+    return res.status(400).json({ error: 'Invalid table' });
+  }
+  const body = req.body;
+
+  let savedData = null;
+  if (supabaseAdmin) {
+    try {
+      const { data, error } = await supabaseAdmin.from(table).upsert(body).select();
+      if (!error && data) {
+        savedData = data;
+      }
+    } catch (err) {
+      console.warn(`Supabase upsert failed for ${table}:`, err);
+    }
+  }
+
+  const updatedItems = db.upsertTableItem(table, body);
+  return res.json({ success: true, data: savedData || updatedItems });
+});
+
+app.delete('/api/admin/:table', async (req: Request, res: Response) => {
+  const table = req.params.table;
+  if (!ALLOWED_TABLES.includes(table)) {
+    return res.status(400).json({ error: 'Invalid table' });
+  }
+  const { id } = req.body;
+  if (!id) {
+    return res.status(400).json({ error: 'ID is required' });
+  }
+
+  if (supabaseAdmin) {
+    try {
+      await supabaseAdmin.from(table).delete().eq('id', id);
+    } catch (err) {
+      console.warn(`Supabase delete failed for ${table}:`, err);
+    }
+  }
+
+  db.deleteTableItem(table, id);
+  return res.json({ success: true });
+});
+
+app.post('/api/admin/upload', upload.single('file'), async (req: Request, res: Response) => {
+  const file = req.file;
+  const folder = (req.body.folder || 'general').replace(/[^a-zA-Z0-9_-]/g, '');
+  if (!file) {
+    return res.status(400).json({ error: 'No file uploaded' });
+  }
+
+  const fileName = `${folder}/${Date.now()}-${file.originalname.replace(/\s+/g, '-')}`;
+
+  if (supabaseAdmin) {
+    try {
+      const { error: uploadError } = await supabaseAdmin.storage
+        .from('jsg-assets')
+        .upload(fileName, file.buffer, { upsert: true, contentType: file.mimetype });
+
+      if (!uploadError) {
+        const { data } = supabaseAdmin.storage.from('jsg-assets').getPublicUrl(fileName);
+        if (data?.publicUrl) {
+          return res.json({ success: true, url: data.publicUrl });
+        }
+      }
+    } catch (err) {
+      console.warn('Supabase storage exception:', err);
+    }
+  }
+
+  // Local fallback
+  const localFileName = `${Date.now()}-${file.originalname.replace(/\s+/g, '-')}`;
+  const localFilePath = path.join(process.cwd(), 'public', 'uploads', localFileName);
+  fs.writeFileSync(localFilePath, file.buffer);
+  const publicUrl = `/uploads/${localFileName}`;
+  return res.json({ success: true, url: publicUrl });
 });
 
 // ----------------------------------------------------

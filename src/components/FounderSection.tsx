@@ -206,6 +206,7 @@ const DEFAULT_BACKGROUND_CARDS_ROW2: InfiniteCard[] = [
 export const FounderSection: React.FC<FounderSectionProps> = ({ onNavigate }) => {
   const { 
     sections, 
+    tables,
     updateFounderCardPhoto, 
     resetFounderCardPhoto, 
     updateShowcaseSlides 
@@ -216,9 +217,38 @@ export const FounderSection: React.FC<FounderSectionProps> = ({ onNavigate }) =>
   const [isTyping, setIsTyping] = useState(true);
 
   // Multi-Photo Showcase Slider State (Hydrated from central server with default fallback)
-  const slides: ShowcaseSlide[] = (sections.showcaseSlides && sections.showcaseSlides.length > 0)
-    ? (sections.showcaseSlides as ShowcaseSlide[])
-    : DEFAULT_SHOWCASE_SLIDES;
+  const dbFounders = tables?.jsg_founders;
+  const dbFounderSlider = tables?.jsg_founder_slider;
+
+  let dynamicSlides: ShowcaseSlide[] = [];
+  if (dbFounders && dbFounders.length > 0) {
+    dbFounders.forEach((f: any, i: number) => {
+      dynamicSlides.push({
+        id: f.id || `founder-${i}`,
+        url: f.image_url || '/assets/founder.jpg',
+        title: f.name || 'JSG Executive Leadership',
+        subtitle: f.designation || 'Founder & Managing Director',
+        tag: i === 0 ? 'Executive Leadership' : 'Executive Partner'
+      });
+      if (dbFounderSlider && dbFounderSlider.length > 0) {
+        dbFounderSlider.filter((fs: any) => fs.founder_id === f.id).forEach((fs: any, j: number) => {
+          dynamicSlides.push({
+            id: fs.id || `fslide-${i}-${j}`,
+            url: fs.image_url,
+            title: f.name || 'JSG Executive Leadership',
+            subtitle: fs.caption || f.designation || 'Executive Partner',
+            tag: 'Executive Partner'
+          });
+        });
+      }
+    });
+  }
+
+  const slides: ShowcaseSlide[] = dynamicSlides.length > 0
+    ? dynamicSlides
+    : ((sections.showcaseSlides && sections.showcaseSlides.length > 0)
+        ? (sections.showcaseSlides as ShowcaseSlide[])
+        : DEFAULT_SHOWCASE_SLIDES);
 
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
   const [autoSlideSpeed] = useState<number>(3400); // Fast, lively, luxury pacing

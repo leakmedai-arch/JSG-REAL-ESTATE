@@ -149,6 +149,7 @@ interface SiteDataContextType {
   properties: Property[];
   pages: CustomPage[];
   aiSettings: AISettingsState;
+  tables: Record<string, any[]>;
   syncState: SyncState;
   contentVersion: number;
   lastUpdatedAt: string;
@@ -317,6 +318,7 @@ export function SiteDataProvider({ children }: { children: ReactNode }) {
     }));
   });
   const [pages, setPages] = useState<CustomPage[]>(cached?.pages || []);
+  const [tables, setTables] = useState<Record<string, any[]>>(cached?.tables || {});
   const [communityImages, setCommunityImages] = useState<Record<string, string>>(cached?.communityImages || {});
   const [aiSettings, setAiSettings] = useState<AISettingsState>(cached?.aiSettings || defaultAISettings);
   const [contentVersion, setContentVersion] = useState<number>(cached?.version || 1);
@@ -365,6 +367,7 @@ export function SiteDataProvider({ children }: { children: ReactNode }) {
           })));
         }
         if (data.pages && Array.isArray(data.pages)) setPages(data.pages);
+        if (data.tables) setTables(data.tables);
         if (data.aiSettings) setAiSettings(data.aiSettings);
         if (data.communityImages) setCommunityImages(data.communityImages);
         if (data.version) setContentVersion(data.version);
@@ -1044,6 +1047,7 @@ export function SiteDataProvider({ children }: { children: ReactNode }) {
         properties,
         pages,
         aiSettings,
+        tables,
         syncState,
         contentVersion,
         lastUpdatedAt,
