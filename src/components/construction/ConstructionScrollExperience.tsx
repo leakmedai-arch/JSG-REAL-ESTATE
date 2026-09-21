@@ -288,8 +288,6 @@ export const ConstructionScrollExperience: React.FC<ConstructionScrollExperience
   preload="auto"
   className="w-full h-full object-cover"
 />
-  <source src="/construction.mp4" type="video/mp4" />
-</video>
 
           {/* Delicate subtle architectural vignette (preserves raw footage and building transformation visibility) */}
           <div className="absolute inset-0 bg-gradient-to-t from-[#0d1613]/85 via-transparent to-[#0d1613]/50 pointer-events-none" />
