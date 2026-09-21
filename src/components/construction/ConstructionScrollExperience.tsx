@@ -278,21 +278,15 @@ export const ConstructionScrollExperience: React.FC<ConstructionScrollExperience
         {/* VIDEO BACKGROUND (Permanent High-Definition Architectural Canvas) */}
         <div className="absolute inset-0 w-full h-full bg-[#0d1613] z-0 overflow-hidden">
           <video
-            ref={videoRef}
-            src={activeVideoSrc}
-            key={activeVideoSrc}
-            playsInline
-            muted
-            preload="auto"
-            onLoadedMetadata={handleLoadedMetadata}
-            onSeeking={handleSeeking}
-            onSeeked={handleSeeked}
-            className="w-full h-full object-cover object-center transform scale-100 will-change-transform"
-            style={{ filter: 'contrast(1.04) saturate(1.06)' }}
-          >
-            <source src={activeVideoSrc} type="video/mp4" />
-            <source src="/construction.mp4" type="video/mp4" />
-          </video>
+  autoPlay
+  muted
+  loop
+  playsInline
+  preload="auto"
+  className="w-full h-full object-cover"
+>
+  <source src="/your-compressed-video-name.mp4" type="video/mp4" />
+</video>
 
           {/* Delicate subtle architectural vignette (preserves raw footage and building transformation visibility) */}
           <div className="absolute inset-0 bg-gradient-to-t from-[#0d1613]/85 via-transparent to-[#0d1613]/50 pointer-events-none" />
