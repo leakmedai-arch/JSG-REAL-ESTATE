@@ -64,28 +64,28 @@ const getSlideTag = (index: number = 0) => {
 const DEFAULT_SHOWCASE_SLIDES: ShowcaseSlide[] = [
   {
     id: 'founder-1',
-    url: '/images/founders/founder-1.jpg',
+    url: '/founder-1.jpg',
     title: 'JSG Executive Leadership',
     subtitle: 'Founder & Managing Director',
     tag: 'Executive Leadership'
   },
   {
     id: 'suite-2',
-    url: '/images/founders/founder-3.jpg',
+    url: '/founder-3.jpg',
     title: 'JSG Executive Leadership',
     subtitle: 'Managing Partner & Executive Director',
     tag: 'Executive Partner'
   },
   {
     id: 'penthouse-3',
-    url: '/images/founders/founder-2.jpg',
+    url: '/founder-2.jpg',
     title: 'JSG Executive Leadership',
     subtitle: 'Founding Partner & Senior Managing Director',
     tag: 'Executive Partner'
   },
   {
     id: 'mansion-4',
-    url: '/images/founders/founder-4.jpg',
+    url: '/founder-4.jpg',
     title: 'JSG Executive Leadership',
     subtitle: 'Executive Partner & Managing Director',
     tag: 'Executive Partner'
