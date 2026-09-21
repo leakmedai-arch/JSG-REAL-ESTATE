@@ -279,14 +279,15 @@ export const ConstructionScrollExperience: React.FC<ConstructionScrollExperience
         <div className="absolute inset-0 w-full h-full bg-[#0d1613] z-0 overflow-hidden">
           <video
   ref={videoRef}
-  key="/construction.mp4"
+  key={activeVideoSrc}
+  src={activeVideoSrc}
   autoPlay
   muted
   loop
   playsInline
   preload="auto"
   className="w-full h-full object-cover"
->
+/>
   <source src="/construction.mp4" type="video/mp4" />
 </video>
 
