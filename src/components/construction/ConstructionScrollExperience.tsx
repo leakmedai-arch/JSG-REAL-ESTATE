@@ -276,7 +276,7 @@ export const ConstructionScrollExperience: React.FC<ConstructionScrollExperience
         } overflow-hidden flex flex-col justify-between select-none z-10`}
       >
         {/* VIDEO BACKGROUND (Permanent High-Definition Architectural Canvas) */}
-        <div className="absolute inset-0 w-full h-full bg-[#0d1613] z-10 overflow-hidden">
+        <div className="absolute inset-0 w-full h-full bg-[#0d1613] z-10 overflow-hidden"> 
           <video
   ref={videoRef}
   key={activeVideoSrc}
