@@ -79,7 +79,7 @@ interface ConstructionScrollExperienceProps {
 }
 
 // Permanent official high-resolution architectural construction video
-const PERMANENT_VIDEO_SRC = '/construction.mp4';
+const PERMANENT_VIDEO_SRC = '/construction.mp4?v=3';
 
 export const ConstructionScrollExperience: React.FC<ConstructionScrollExperienceProps> = ({ 
   onNavigate
