@@ -278,6 +278,8 @@ export const ConstructionScrollExperience: React.FC<ConstructionScrollExperience
         {/* VIDEO BACKGROUND (Permanent High-Definition Architectural Canvas) */}
         <div className="absolute inset-0 w-full h-full bg-[#0d1613] z-0 overflow-hidden">
           <video
+  ref={videoRef}
+  key="/construction.mp4"
   autoPlay
   muted
   loop
@@ -285,7 +287,7 @@ export const ConstructionScrollExperience: React.FC<ConstructionScrollExperience
   preload="auto"
   className="w-full h-full object-cover"
 >
-  <source src="/your-compressed-video-name.mp4" type="video/mp4" />
+  <source src="/construction.mp4" type="video/mp4" />
 </video>
 
           {/* Delicate subtle architectural vignette (preserves raw footage and building transformation visibility) */}
