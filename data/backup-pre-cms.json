@@ -1,0 +1,657 @@
+{
+  "timestamp": "2026-09-19T07:02:07.890Z",
+  "label": "PRE-CMS FULL PRODUCTION BACKUP",
+  "version": "1.0.0-PROD-BASELINE",
+  "sourceManifest": {
+    "siteName": "JSG Real Estate",
+    "approvedFrontend": true,
+    "pixelPerfectPreservation": true
+  },
+  "jsgData": {
+    "site": {
+      "name": "JSG REAL ESTATE",
+      "tagline": "PROPERTY · LIFESTYLE · TRUST",
+      "logo": "assets/jsg-logo.png",
+      "topLocation": "Dubai · United Arab Emirates",
+      "phone": "+971 4 320 2030",
+      "email": "info@jsgrealestate.ae",
+      "language": "EN",
+      "canonical": "https://jsgrealestate.ae/"
+    },
+    "header": {
+      "nav": [
+        "Buy",
+        "Rent",
+        "Sell",
+        "New Projects",
+        "Tools & Insights",
+        "Find Agents",
+        "Mortgages"
+      ],
+      "call": "Call",
+      "cta": "List Property"
+    },
+    "hero": {
+      "eyebrow": "JSG REAL ESTATE · DUBAI & UAE",
+      "title": "Find a place that feels like yours.",
+      "description": "Discover exceptional homes, landmark residences, commercial opportunities and new developments across Dubai and the UAE.",
+      "primary": "Explore Properties",
+      "secondary": "Speak to JSG",
+      "slides": [
+        "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=2200&q=90",
+        "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=2200&q=90",
+        "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=2200&q=90",
+        "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=2200&q=90"
+      ]
+    },
+    "stats": [
+      {
+        "number": 12,
+        "label": "Dubai Areas"
+      },
+      {
+        "number": 250,
+        "label": "Premium Listings"
+      },
+      {
+        "number": 18,
+        "label": "Years of Expertise"
+      },
+      {
+        "number": 100,
+        "label": "% Client Focus"
+      }
+    ],
+    "areas": [
+      {
+        "name": "Downtown Dubai",
+        "subtitle": "Luxury apartments · Investment",
+        "image": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1000&q=85"
+      },
+      {
+        "name": "Dubai Marina",
+        "subtitle": "Waterfront living · Apartments",
+        "image": "https://images.unsplash.com/photo-1523112075569-f39f307e7f07?auto=format&fit=crop&w=1000&q=85"
+      },
+      {
+        "name": "Palm Jumeirah",
+        "subtitle": "Ultra luxury · Villas",
+        "image": "https://images.unsplash.com/photo-1534430480872-3498386e7852?auto=format&fit=crop&w=1000&q=85"
+      },
+      {
+        "name": "Dubai Hills Estate",
+        "subtitle": "Family living · Villas",
+        "image": "https://images.unsplash.com/photo-1605146769289-440113cc3d00?auto=format&fit=crop&w=1000&q=85"
+      },
+      {
+        "name": "Business Bay",
+        "subtitle": "City living · Investments",
+        "image": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=85"
+      },
+      {
+        "name": "Jumeirah",
+        "subtitle": "Beachside · Villas",
+        "image": "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1000&q=85"
+      },
+      {
+        "name": "Jumeirah Village Circle",
+        "subtitle": "Affordable · Investment",
+        "image": "https://images.unsplash.com/photo-1600566753051-40f0d0f0f3e1?auto=format&fit=crop&w=1000&q=85"
+      },
+      {
+        "name": "Arabian Ranches",
+        "subtitle": "Family villas · Community",
+        "image": "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1000&q=85"
+      }
+    ],
+    "buildings": [
+      {
+        "name": "Aspin Tower",
+        "subtitle": "Dubai · Premium residences",
+        "image": "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1000&q=85"
+      },
+      {
+        "name": "Al Attar Tower",
+        "subtitle": "Sheikh Zayed Road · Commercial & residential",
+        "image": "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1000&q=85"
+      },
+      {
+        "name": "Al Hamriya Palace 2",
+        "subtitle": "Dubai · Residential opportunity",
+        "image": "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1000&q=85"
+      },
+      {
+        "name": "Emerald Building",
+        "subtitle": "Dubai · Premium property",
+        "image": "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1000&q=85"
+      },
+      {
+        "name": "Orient Al Fardan Building",
+        "subtitle": "Dubai · Premium property",
+        "image": "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1000&q=85"
+      }
+    ],
+    "why": {
+      "eyebrow": "THE JSG DIFFERENCE",
+      "title": "Property decisions made with clarity.",
+      "description": "JSG Real Estate combines premium property presentation with local market knowledge, personal service and a straightforward journey from discovery to viewing and transaction.",
+      "button": "Talk to JSG",
+      "cards": [
+        {
+          "title": "01 · Discover",
+          "text": "Search residential, commercial and new-development opportunities."
+        },
+        {
+          "title": "02 · Compare",
+          "text": "Review properties by location, lifestyle and investment potential."
+        },
+        {
+          "title": "03 · Connect",
+          "text": "Speak directly with a JSG advisor and arrange your viewing."
+        },
+        {
+          "title": "04 · Move Forward",
+          "text": "Keep your property journey organised from enquiry to completion."
+        }
+      ]
+    },
+    "services": [
+      {
+        "title": "Buy",
+        "description": "Find residential and investment properties across Dubai and the UAE."
+      },
+      {
+        "title": "Rent",
+        "description": "Discover quality homes for annual, monthly and selected short-term requirements."
+      },
+      {
+        "title": "Sell",
+        "description": "Present your property professionally and connect with qualified buyers."
+      },
+      {
+        "title": "New Projects",
+        "description": "Explore new developments and off-plan investment opportunities."
+      }
+    ],
+    "sell": {
+      "eyebrow": "PROPERTY OWNERS",
+      "title": "Ready to sell or rent your property?",
+      "description": "Give your property a premium JSG presentation and connect with prospective buyers or tenants.",
+      "button": "List Your Property"
+    },
+    "contact": {
+      "eyebrow": "CONTACT JSG",
+      "title": "Let's find your next property.",
+      "description": "Tell us what you are looking for and a JSG advisor will contact you.",
+      "company": "JSG Real Estate",
+      "companyDescription": "Premium real estate services across Dubai and the United Arab Emirates.",
+      "phone": "+971 4 320 2030",
+      "email": "info@jsgrealestate.ae",
+      "location": "Dubai, United Arab Emirates",
+      "button": "Send Enquiry"
+    },
+    "footer": {
+      "description": "Natural luxury. Human service. Smarter property decisions across Dubai and the UAE.",
+      "copyright": "© 2026 JSG Real Estate. All rights reserved.",
+      "location": "Dubai · UAE"
+    },
+    "optional": {
+      "awardsEnabled": false,
+      "awards": []
+    },
+    "theme": {
+      "name": "classic",
+      "green": "#17362f",
+      "green2": "#21483d",
+      "green3": "#0e2923",
+      "cream": "#f7f4ed",
+      "gold": "#b58b4a",
+      "gold2": "#d9bf8c",
+      "black": "#17211f",
+      "line": "#e4ddd1"
+    },
+    "animation": {
+      "reveal": "up",
+      "duration": 800,
+      "distance": 35,
+      "delay": 0,
+      "heroDuration": 1200,
+      "hoverLift": 7,
+      "pageTransition": "fade"
+    },
+    "advanced": [],
+    "properties": [
+      {
+        "id": 1,
+        "type": "apartment",
+        "tag": "Verified",
+        "title": "Elegant 2BR · Full Marina View",
+        "location": "Marina Gate, Dubai Marina",
+        "price": 1450000,
+        "beds": 2,
+        "baths": 3,
+        "area": 1320,
+        "mode": "buy",
+        "image": "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1400&q=90"
+      },
+      {
+        "id": 2,
+        "type": "villa",
+        "tag": "Featured",
+        "title": "Private Garden Villa",
+        "location": "Dubai Hills Estate",
+        "price": 6900000,
+        "beds": 4,
+        "baths": 5,
+        "area": 4200,
+        "mode": "buy",
+        "image": "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=90"
+      },
+      {
+        "id": 3,
+        "type": "penthouse",
+        "tag": "Premium",
+        "title": "Skyline Penthouse · Terrace",
+        "location": "Downtown Dubai",
+        "price": 12500000,
+        "beds": 4,
+        "baths": 5,
+        "area": 4800,
+        "mode": "buy",
+        "image": "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1400&q=90"
+      },
+      {
+        "id": 4,
+        "type": "apartment",
+        "tag": "New",
+        "title": "Refined 1BR · Burj View",
+        "location": "Downtown Dubai",
+        "price": 1850000,
+        "beds": 1,
+        "baths": 1,
+        "area": 780,
+        "mode": "buy",
+        "image": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1400&q=90"
+      },
+      {
+        "id": 5,
+        "type": "townhouse",
+        "tag": "Family",
+        "title": "Corner Townhouse · Park Facing",
+        "location": "Villanova, Dubai",
+        "price": 2850000,
+        "beds": 3,
+        "baths": 4,
+        "area": 2140,
+        "mode": "buy",
+        "image": "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1400&q=90"
+      },
+      {
+        "id": 6,
+        "type": "apartment",
+        "tag": "Investment",
+        "title": "Modern 2BR · Canal Access",
+        "location": "Business Bay",
+        "price": 2350000,
+        "beds": 2,
+        "baths": 2,
+        "area": 1180,
+        "mode": "buy",
+        "image": "https://images.unsplash.com/photo-1600566753051-40f0d0f0f3e1?auto=format&fit=crop&w=1400&q=90"
+      },
+      {
+        "id": 7,
+        "type": "apartment",
+        "tag": "For Rent",
+        "title": "Luxury 2BR · Sheikh Zayed Road",
+        "location": "Al Attar Tower · Dubai",
+        "price": 120000,
+        "beds": 2,
+        "baths": 2,
+        "area": 1350,
+        "mode": "rent",
+        "image": "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1400&q=90"
+      },
+      {
+        "id": 8,
+        "type": "villa",
+        "tag": "Exclusive",
+        "title": "Al Hamriya Palace 2",
+        "location": "Dubai",
+        "price": 450000,
+        "beds": 5,
+        "baths": 6,
+        "area": 6500,
+        "mode": "rent",
+        "image": "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=90"
+      },
+      {
+        "id": 9,
+        "type": "apartment",
+        "tag": "Featured",
+        "title": "Emerald Building Residence",
+        "location": "Dubai",
+        "price": 95000,
+        "beds": 1,
+        "baths": 2,
+        "area": 890,
+        "mode": "rent",
+        "image": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1400&q=90"
+      },
+      {
+        "id": 10,
+        "type": "apartment",
+        "tag": "New Project",
+        "title": "Aspin Tower Residence",
+        "location": "Dubai",
+        "price": 2150000,
+        "beds": 2,
+        "baths": 2,
+        "area": 1250,
+        "mode": "new",
+        "image": "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1400&q=90"
+      }
+    ]
+  },
+  "sections": {
+    "founder": {
+      "name": "JASMEET SINGH GULATI",
+      "title": "Founder & Chief Executive Officer",
+      "subtitle": "15+ Years Driving Institutional & Ultra-Luxury UAE Real Estate Acquisitions",
+      "experienceYears": 15,
+      "dealsVolume": "AED 4.8B+",
+      "typewriterPhrases": [
+        "Institutional Asset Advisory & Private Off-Market Acquisitions",
+        "Dubai Trophy Penthouses & Waterfront Signature Mansions",
+        "High-Yield Portfolios Delivering Consistent 8–11% ROI"
+      ],
+      "executiveStatement": "At JSG Real Estate, our philosophy transcends conventional transactions. We curate generational assets for visionary individuals who view Dubai as the preeminent luxury metropolis of the modern world.",
+      "detailedBio": "Jasmeet Singh Gulati founded JSG Real Estate with an uncompromising focus on discretion, analytical precision, and fiduciary integrity. Having directed over AED 4.8 Billion in high-profile residential and commercial transactions across Downtown Dubai, Palm Jumeirah, and Emirates Hills, Jasmeet serves as the trusted property advisor to international family offices and discerning private investors.",
+      "portraitImage": "/assets/founder.jpg",
+      "credentials": [
+        "RERA Certified Real Estate Broker",
+        "DLD Gold Tier Agency Principal",
+        "15+ Years UAE Market Leadership"
+      ]
+    },
+    "heroSlides": [
+      {
+        "id": "slide-1",
+        "tag": "Trophy Residence",
+        "title": "Palm Jumeirah Waterfrond Villa",
+        "subtitle": "Direct beach access, infinity pool overlooking Dubai Marina skyline, and bespoke Italian furnishings.",
+        "location": "Frond G, Palm Jumeirah",
+        "priceAed": 28500000,
+        "beds": 6,
+        "baths": 7,
+        "areaSqft": 8400,
+        "image": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1920&q=90",
+        "link": "/buy",
+        "active": true,
+        "order": 1
+      },
+      {
+        "id": "slide-2",
+        "tag": "Downtown Skyline",
+        "title": "The Royal Marina Residence",
+        "subtitle": "Floor-to-ceiling glass panorama, private yacht dock access, and marble craftsmanship throughout.",
+        "location": "Dubai Marina",
+        "priceAed": 3850000,
+        "beds": 3,
+        "baths": 4,
+        "areaSqft": 2150,
+        "image": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1920&q=90",
+        "link": "/buy",
+        "active": true,
+        "order": 2
+      },
+      {
+        "id": "slide-3",
+        "tag": "Golf Sanctuary",
+        "title": "Dubai Hills Parkway Mansion",
+        "subtitle": "Overlooking championship 18-hole golf fairways with private rooftop observatory and landscaped courtyard.",
+        "location": "Dubai Hills Estate",
+        "priceAed": 19800000,
+        "beds": 5,
+        "baths": 6,
+        "areaSqft": 7200,
+        "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=90",
+        "link": "/buy",
+        "active": true,
+        "order": 3
+      }
+    ],
+    "showcaseSlides": [
+      {
+        "id": "founder-1",
+        "url": "/assets/founder.jpg",
+        "title": "JSG Executive Leadership",
+        "subtitle": "Founder & Managing Director",
+        "tag": "Leadership"
+      },
+      {
+        "id": "suite-2",
+        "url": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85",
+        "title": "Private Advisory Suite",
+        "subtitle": "High-Net-Worth Advisory Lounge, Downtown Dubai",
+        "tag": "Private Office"
+      },
+      {
+        "id": "penthouse-3",
+        "url": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=85",
+        "title": "Palm Jumeirah Signature Villa",
+        "subtitle": "Private Beachfront Key Handover Ceremony",
+        "tag": "Curated Handover"
+      },
+      {
+        "id": "mansion-4",
+        "url": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=85",
+        "title": "Fairway Vistas Championship Estate",
+        "subtitle": "Dubai Hills Prime Architectural Masterpiece",
+        "tag": "Trophy Estate"
+      }
+    ],
+    "infiniteCardsRow1": [
+      {
+        "id": "dubai-bg-1",
+        "title": "Palm Jumeirah Signature Beachfront Villa",
+        "image": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80",
+        "defaultImage": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80",
+        "price": "AED 28.5M",
+        "area": "Palm Jumeirah, Dubai"
+      },
+      {
+        "id": "dubai-bg-2",
+        "title": "Burj Crown Sky Penthouse",
+        "image": "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=800&q=80",
+        "defaultImage": "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=800&q=80",
+        "price": "AED 16.5M",
+        "area": "Downtown Dubai"
+      },
+      {
+        "id": "dubai-bg-3",
+        "title": "Fairway Vistas Championship Mansion",
+        "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
+        "defaultImage": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
+        "price": "AED 24.2M",
+        "area": "Dubai Hills Estate"
+      },
+      {
+        "id": "dubai-bg-4",
+        "title": "The Royal Marina High-Altitude Suite",
+        "image": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80",
+        "defaultImage": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80",
+        "price": "AED 5.85M",
+        "area": "Dubai Marina"
+      },
+      {
+        "id": "dubai-bg-5",
+        "title": "District One Crystal Lagoon Villa",
+        "image": "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=800&q=80",
+        "defaultImage": "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=800&q=80",
+        "price": "AED 21.0M",
+        "area": "MBR City, Dubai"
+      },
+      {
+        "id": "dubai-bg-6",
+        "title": "One Canal Waterfront Luxury Sky Villa",
+        "image": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80",
+        "defaultImage": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80",
+        "price": "AED 19.5M",
+        "area": "Dubai Water Canal"
+      }
+    ],
+    "infiniteCardsRow2": [
+      {
+        "id": "dubai-bg-7",
+        "title": "Jumeirah Bay Island Bulgari Mansion",
+        "image": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80",
+        "defaultImage": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80",
+        "price": "AED 55.0M",
+        "area": "Jumeirah Bay Island, Dubai"
+      },
+      {
+        "id": "dubai-bg-8",
+        "title": "Atlantis The Royal Palm Crescent Suite",
+        "image": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=800&q=80",
+        "defaultImage": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=800&q=80",
+        "price": "AED 34.0M",
+        "area": "Palm Jumeirah, Dubai"
+      },
+      {
+        "id": "dubai-bg-9",
+        "title": "Emirates Hills Montgomerie Villa",
+        "image": "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=800&q=80",
+        "defaultImage": "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=800&q=80",
+        "price": "AED 38.5M",
+        "area": "Emirates Hills, Dubai"
+      },
+      {
+        "id": "dubai-bg-10",
+        "title": "Il Primo Opera Grand Penthouse",
+        "image": "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=800&q=80",
+        "defaultImage": "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=800&q=80",
+        "price": "AED 22.0M",
+        "area": "Downtown Dubai"
+      },
+      {
+        "id": "dubai-bg-11",
+        "title": "Bluewaters Bay Island Residence",
+        "image": "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=800&q=80",
+        "defaultImage": "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=800&q=80",
+        "price": "AED 8.4M",
+        "area": "Bluewaters Island, Dubai"
+      },
+      {
+        "id": "dubai-bg-12",
+        "title": "Al Barari Botanical Luxury Estate",
+        "image": "https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?auto=format&fit=crop&w=800&q=80",
+        "defaultImage": "https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?auto=format&fit=crop&w=800&q=80",
+        "price": "AED 17.5M",
+        "area": "Al Barari, Dubai"
+      }
+    ],
+    "hero3dSettings": {
+      "enabled": true,
+      "autoRotate": true,
+      "rotationSpeed": 1,
+      "fov": 45
+    },
+    "quickCardsVisible": true,
+    "liveBannerVisible": true,
+    "featuredPropertiesVisible": true,
+    "developersStripVisible": true,
+    "communitiesStripVisible": true,
+    "version": 2,
+    "updatedAt": "2026-09-17T07:54:40.871Z",
+    "heroSliderPhotos": {
+      "1": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=2000&q=90"
+    }
+  },
+  "users": [
+    {
+      "id": "user-admin-1",
+      "username": "maleek",
+      "email": "admin@jsgrealestate.ae",
+      "passwordHash": "b00c5df53dc642c5b49ed71ce472c5196368b1cccba7407015909cc53626d272e3067dcca4c781121e8a91980dda355c1a62d8ccdd20d13be990676224a8c913",
+      "salt": "8ddc41ae649877eb4e9b2643cdc78ba8",
+      "role": "super_admin",
+      "name": "MALEEK",
+      "is2faEnabled": false,
+      "failedLoginAttempts": 0,
+      "createdAt": "2026-09-12T12:59:20.208Z",
+      "lastLogin": "2026-09-12T13:04:41.535Z"
+    }
+  ],
+  "audit": [
+    {
+      "userId": "Hero Slider Editor",
+      "userEmail": "Hero Slider Editor",
+      "action": "HERO_SLIDER_PHOTO_UPDATED",
+      "entityType": "Sections",
+      "details": "Updated Hero Slider photo for slide #1",
+      "ip": "127.0.0.1",
+      "id": "audit-1789631680872-jga3u",
+      "timestamp": "2026-09-17T07:54:40.872Z"
+    },
+    {
+      "userId": "user-admin-1",
+      "userEmail": "admin@jsgrealestate.ae",
+      "action": "LOGIN_SUCCESS",
+      "entityType": "Auth",
+      "details": "Successful admin login from IP 127.0.0.1",
+      "ip": "127.0.0.1",
+      "id": "audit-1789218281536-ak4zr",
+      "timestamp": "2026-09-12T13:04:41.536Z"
+    },
+    {
+      "userId": "user-admin-1",
+      "userEmail": "admin@jsgrealestate.ae",
+      "action": "LOGIN_SUCCESS",
+      "entityType": "Auth",
+      "details": "Successful admin login from IP 127.0.0.1",
+      "ip": "127.0.0.1",
+      "id": "audit-1789218197943-7kyli",
+      "timestamp": "2026-09-12T13:03:17.943Z"
+    },
+    {
+      "userId": "user-admin-1",
+      "userEmail": "admin@jsgrealestate.ae",
+      "action": "LOGIN_SUCCESS",
+      "entityType": "Auth",
+      "details": "Successful admin login from IP 127.0.0.1",
+      "ip": "127.0.0.1",
+      "id": "audit-1789218152892-4cbio",
+      "timestamp": "2026-09-12T13:02:32.892Z"
+    },
+    {
+      "userId": "user-admin-1",
+      "userEmail": "admin@jsgrealestate.ae",
+      "action": "LOGIN_SUCCESS",
+      "entityType": "Auth",
+      "details": "Successful admin login from IP 127.0.0.1",
+      "ip": "127.0.0.1",
+      "id": "audit-1789218150298-ipr1p",
+      "timestamp": "2026-09-12T13:02:30.298Z"
+    },
+    {
+      "userId": "system",
+      "userEmail": "system",
+      "action": "USER_INITIALIZED",
+      "entityType": "User",
+      "entityId": "user-admin-1",
+      "details": "Initialized default super_admin account: admin@jsgrealestate.ae",
+      "ip": "127.0.0.1",
+      "id": "audit-1789217960208-0bz4l",
+      "timestamp": "2026-09-12T12:59:20.208Z"
+    }
+  ],
+  "communityImages": {},
+  "metadata": {
+    "heroSlidesCount": 4,
+    "propertiesCount": 16,
+    "areasCount": 12,
+    "partnersCount": 5,
+    "buildingsCount": 4
+  }
+}

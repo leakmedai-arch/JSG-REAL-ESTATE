@@ -1,0 +1,346 @@
+{
+  "site": {
+    "name": "JSG REAL ESTATE",
+    "tagline": "PROPERTY · LIFESTYLE · TRUST",
+    "logo": "assets/jsg-logo.png",
+    "topLocation": "Dubai · United Arab Emirates",
+    "phone": "+971 4 320 2030",
+    "email": "info@jsgrealestate.ae",
+    "language": "EN",
+    "canonical": "https://jsgrealestate.ae/"
+  },
+  "header": {
+    "nav": [
+      "Buy",
+      "Rent",
+      "Sell",
+      "New Projects",
+      "Tools & Insights",
+      "Find Agents",
+      "Mortgages"
+    ],
+    "call": "Call",
+    "cta": "List Property"
+  },
+  "hero": {
+    "eyebrow": "JSG REAL ESTATE · DUBAI & UAE",
+    "title": "Find a place that feels like yours.",
+    "description": "Discover exceptional homes, landmark residences, commercial opportunities and new developments across Dubai and the UAE.",
+    "primary": "Explore Properties",
+    "secondary": "Speak to JSG",
+    "slides": [
+      "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=2200&q=90",
+      "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=2200&q=90",
+      "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=2200&q=90",
+      "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=2200&q=90"
+    ]
+  },
+  "stats": [
+    {
+      "number": 12,
+      "label": "Dubai Areas"
+    },
+    {
+      "number": 250,
+      "label": "Premium Listings"
+    },
+    {
+      "number": 18,
+      "label": "Years of Expertise"
+    },
+    {
+      "number": 100,
+      "label": "% Client Focus"
+    }
+  ],
+  "areas": [
+    {
+      "name": "Downtown Dubai",
+      "subtitle": "Luxury apartments · Investment",
+      "image": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1000&q=85"
+    },
+    {
+      "name": "Dubai Marina",
+      "subtitle": "Waterfront living · Apartments",
+      "image": "https://images.unsplash.com/photo-1523112075569-f39f307e7f07?auto=format&fit=crop&w=1000&q=85"
+    },
+    {
+      "name": "Palm Jumeirah",
+      "subtitle": "Ultra luxury · Villas",
+      "image": "https://images.unsplash.com/photo-1534430480872-3498386e7852?auto=format&fit=crop&w=1000&q=85"
+    },
+    {
+      "name": "Dubai Hills Estate",
+      "subtitle": "Family living · Villas",
+      "image": "https://images.unsplash.com/photo-1605146769289-440113cc3d00?auto=format&fit=crop&w=1000&q=85"
+    },
+    {
+      "name": "Business Bay",
+      "subtitle": "City living · Investments",
+      "image": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=85"
+    },
+    {
+      "name": "Jumeirah",
+      "subtitle": "Beachside · Villas",
+      "image": "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1000&q=85"
+    },
+    {
+      "name": "Jumeirah Village Circle",
+      "subtitle": "Affordable · Investment",
+      "image": "https://images.unsplash.com/photo-1600566753051-40f0d0f0f3e1?auto=format&fit=crop&w=1000&q=85"
+    },
+    {
+      "name": "Arabian Ranches",
+      "subtitle": "Family villas · Community",
+      "image": "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1000&q=85"
+    }
+  ],
+  "buildings": [
+    {
+      "name": "Aspin Tower",
+      "subtitle": "Dubai · Premium residences",
+      "image": "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1000&q=85"
+    },
+    {
+      "name": "Al Attar Tower",
+      "subtitle": "Sheikh Zayed Road · Commercial & residential",
+      "image": "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1000&q=85"
+    },
+    {
+      "name": "Al Hamriya Palace 2",
+      "subtitle": "Dubai · Residential opportunity",
+      "image": "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1000&q=85"
+    },
+    {
+      "name": "Emerald Building",
+      "subtitle": "Dubai · Premium property",
+      "image": "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1000&q=85"
+    },
+    {
+      "name": "Orient Al Fardan Building",
+      "subtitle": "Dubai · Premium property",
+      "image": "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1000&q=85"
+    }
+  ],
+  "why": {
+    "eyebrow": "THE JSG DIFFERENCE",
+    "title": "Property decisions made with clarity.",
+    "description": "JSG Real Estate combines premium property presentation with local market knowledge, personal service and a straightforward journey from discovery to viewing and transaction.",
+    "button": "Talk to JSG",
+    "cards": [
+      {
+        "title": "01 · Discover",
+        "text": "Search residential, commercial and new-development opportunities."
+      },
+      {
+        "title": "02 · Compare",
+        "text": "Review properties by location, lifestyle and investment potential."
+      },
+      {
+        "title": "03 · Connect",
+        "text": "Speak directly with a JSG advisor and arrange your viewing."
+      },
+      {
+        "title": "04 · Move Forward",
+        "text": "Keep your property journey organised from enquiry to completion."
+      }
+    ]
+  },
+  "services": [
+    {
+      "title": "Buy",
+      "description": "Find residential and investment properties across Dubai and the UAE."
+    },
+    {
+      "title": "Rent",
+      "description": "Discover quality homes for annual, monthly and selected short-term requirements."
+    },
+    {
+      "title": "Sell",
+      "description": "Present your property professionally and connect with qualified buyers."
+    },
+    {
+      "title": "New Projects",
+      "description": "Explore new developments and off-plan investment opportunities."
+    }
+  ],
+  "sell": {
+    "eyebrow": "PROPERTY OWNERS",
+    "title": "Ready to sell or rent your property?",
+    "description": "Give your property a premium JSG presentation and connect with prospective buyers or tenants.",
+    "button": "List Your Property"
+  },
+  "contact": {
+    "eyebrow": "CONTACT JSG",
+    "title": "Let's find your next property.",
+    "description": "Tell us what you are looking for and a JSG advisor will contact you.",
+    "company": "JSG Real Estate",
+    "companyDescription": "Premium real estate services across Dubai and the United Arab Emirates.",
+    "phone": "+971 4 320 2030",
+    "email": "info@jsgrealestate.ae",
+    "location": "Dubai, United Arab Emirates",
+    "button": "Send Enquiry"
+  },
+  "footer": {
+    "description": "Natural luxury. Human service. Smarter property decisions across Dubai and the UAE.",
+    "copyright": "© 2026 JSG Real Estate. All rights reserved.",
+    "location": "Dubai · UAE"
+  },
+  "optional": {
+    "awardsEnabled": false,
+    "awards": []
+  },
+  "theme": {
+    "name": "classic",
+    "green": "#17362f",
+    "green2": "#21483d",
+    "green3": "#0e2923",
+    "cream": "#f7f4ed",
+    "gold": "#b58b4a",
+    "gold2": "#d9bf8c",
+    "black": "#17211f",
+    "line": "#e4ddd1"
+  },
+  "animation": {
+    "reveal": "up",
+    "duration": 800,
+    "distance": 35,
+    "delay": 0,
+    "heroDuration": 1200,
+    "hoverLift": 7,
+    "pageTransition": "fade"
+  },
+  "advanced": [],
+  "properties": [
+    {
+      "id": 1,
+      "type": "apartment",
+      "tag": "Verified",
+      "title": "Elegant 2BR · Full Marina View",
+      "location": "Marina Gate, Dubai Marina",
+      "price": 1450000,
+      "beds": 2,
+      "baths": 3,
+      "area": 1320,
+      "mode": "buy",
+      "image": "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1400&q=90"
+    },
+    {
+      "id": 2,
+      "type": "villa",
+      "tag": "Featured",
+      "title": "Private Garden Villa",
+      "location": "Dubai Hills Estate",
+      "price": 6900000,
+      "beds": 4,
+      "baths": 5,
+      "area": 4200,
+      "mode": "buy",
+      "image": "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=90"
+    },
+    {
+      "id": 3,
+      "type": "penthouse",
+      "tag": "Premium",
+      "title": "Skyline Penthouse · Terrace",
+      "location": "Downtown Dubai",
+      "price": 12500000,
+      "beds": 4,
+      "baths": 5,
+      "area": 4800,
+      "mode": "buy",
+      "image": "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1400&q=90"
+    },
+    {
+      "id": 4,
+      "type": "apartment",
+      "tag": "New",
+      "title": "Refined 1BR · Burj View",
+      "location": "Downtown Dubai",
+      "price": 1850000,
+      "beds": 1,
+      "baths": 1,
+      "area": 780,
+      "mode": "buy",
+      "image": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1400&q=90"
+    },
+    {
+      "id": 5,
+      "type": "townhouse",
+      "tag": "Family",
+      "title": "Corner Townhouse · Park Facing",
+      "location": "Villanova, Dubai",
+      "price": 2850000,
+      "beds": 3,
+      "baths": 4,
+      "area": 2140,
+      "mode": "buy",
+      "image": "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1400&q=90"
+    },
+    {
+      "id": 6,
+      "type": "apartment",
+      "tag": "Investment",
+      "title": "Modern 2BR · Canal Access",
+      "location": "Business Bay",
+      "price": 2350000,
+      "beds": 2,
+      "baths": 2,
+      "area": 1180,
+      "mode": "buy",
+      "image": "https://images.unsplash.com/photo-1600566753051-40f0d0f0f3e1?auto=format&fit=crop&w=1400&q=90"
+    },
+    {
+      "id": 7,
+      "type": "apartment",
+      "tag": "For Rent",
+      "title": "Luxury 2BR · Sheikh Zayed Road",
+      "location": "Al Attar Tower · Dubai",
+      "price": 120000,
+      "beds": 2,
+      "baths": 2,
+      "area": 1350,
+      "mode": "rent",
+      "image": "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1400&q=90"
+    },
+    {
+      "id": 8,
+      "type": "villa",
+      "tag": "Exclusive",
+      "title": "Al Hamriya Palace 2",
+      "location": "Dubai",
+      "price": 450000,
+      "beds": 5,
+      "baths": 6,
+      "area": 6500,
+      "mode": "rent",
+      "image": "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=90"
+    },
+    {
+      "id": 9,
+      "type": "apartment",
+      "tag": "Featured",
+      "title": "Emerald Building Residence",
+      "location": "Dubai",
+      "price": 95000,
+      "beds": 1,
+      "baths": 2,
+      "area": 890,
+      "mode": "rent",
+      "image": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1400&q=90"
+    },
+    {
+      "id": 10,
+      "type": "apartment",
+      "tag": "New Project",
+      "title": "Aspin Tower Residence",
+      "location": "Dubai",
+      "price": 2150000,
+      "beds": 2,
+      "baths": 2,
+      "area": 1250,
+      "mode": "new",
+      "image": "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1400&q=90"
+    }
+  ]
+}

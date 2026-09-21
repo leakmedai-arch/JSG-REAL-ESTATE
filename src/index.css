@@ -1,0 +1,905 @@
+@import "tailwindcss";
+
+/* ---------------------------------------------------- */
+/* INFINITE SCROLL TICKER (PAUSES ON HOVER & TOUCH)     */
+/* ---------------------------------------------------- */
+@keyframes infiniteMarquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marqueeLeft {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee-left {
+  display: flex;
+  width: max-content;
+  animation: marqueeLeft 38s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee-left:hover,
+.animate-marquee-left:focus-within,
+.animate-marquee-left:active {
+  animation-play-state: paused !important;
+}
+
+/* Slow infinite scroll for service cards */
+.animate-marquee-slow {
+  display: flex;
+  width: max-content;
+  animation: marqueeLeft 65s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee-slow:hover,
+.animate-marquee-slow:focus-within,
+.animate-marquee-slow:active {
+  animation-play-state: paused !important;
+}
+
+.animate-infinite-ticker {
+  display: flex;
+  width: max-content;
+  animation: infiniteMarquee 34s linear infinite;
+  will-change: transform;
+}
+
+/* Pause scroll when cursor hovers, focus occurs, or element is touched */
+.animate-infinite-ticker:hover,
+.animate-infinite-ticker:focus-within,
+.animate-infinite-ticker:active,
+.ticker-paused {
+  animation-play-state: paused !important;
+}
+
+/* ---------------------------------------------------- */
+/* 3D FLOATING PILL ULTRA-SLIM SHIMMERY WHITE GLASS (R: 50px) */
+/* Crystal Clear Specular Glass with NO Blur Effect */
+/* ---------------------------------------------------- */
+@keyframes periodicLightGlimpse {
+  0% {
+    left: -45%;
+    opacity: 0;
+  }
+  6% {
+    opacity: 1;
+  }
+  38% {
+    left: 145%;
+    opacity: 1;
+  }
+  42% {
+    left: 145%;
+    opacity: 0;
+  }
+  100% {
+    left: 145%;
+    opacity: 0;
+  }
+}
+
+.animate-light-glimpse {
+  animation: periodicLightGlimpse 4.6s cubic-bezier(0.2, 0.8, 0.4, 1) infinite;
+}
+
+/* Glass shine animation for 3D Reactive Metric Cards */
+@keyframes periodicGlassShine {
+  0% {
+    transform: translateX(-150%) skewX(-25deg);
+    opacity: 0;
+  }
+  12% {
+    opacity: 0.9;
+  }
+  32% {
+    transform: translateX(250%) skewX(-25deg);
+    opacity: 0.9;
+  }
+  38% {
+    transform: translateX(250%) skewX(-25deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(250%) skewX(-25deg);
+    opacity: 0;
+  }
+}
+
+.animate-glass-shine {
+  animation: periodicGlassShine 4.8s ease-in-out infinite;
+}
+
+/* Clean Shiny Glass Navigation Bar - No Blur Effect on Scroll */
+.floating-pill-glass-header {
+  border-radius: 50px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.94) 0%,
+    rgba(253, 251, 247, 0.90) 50%,
+    rgba(255, 255, 255, 0.92) 100%
+  );
+  border: 1.5px solid rgba(255, 255, 255, 0.95);
+  box-shadow: 
+    0 16px 40px -10px rgba(17, 41, 35, 0.35),
+    0 0 20px 0 rgba(255, 255, 255, 0.6),
+    0 2px 3px 0 rgba(255, 255, 255, 1) inset,
+    0 -2px 3px 0 rgba(217, 191, 140, 0.5) inset;
+}
+
+.floating-pill-glass-header.scrolled-header {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.98) 0%,
+    rgba(253, 251, 247, 0.96) 50%,
+    rgba(255, 255, 255, 0.97) 100%
+  );
+  border: 1.5px solid rgba(217, 191, 140, 0.6);
+  box-shadow: 
+    0 20px 45px -10px rgba(17, 41, 35, 0.45),
+    0 0 25px 0 rgba(255, 255, 255, 0.7),
+    0 2px 4px 0 rgba(255, 255, 255, 1) inset,
+    0 -2px 4px 0 rgba(217, 191, 140, 0.6) inset;
+}
+
+/* 3D Tactile Buttons */
+/* Deep blood-red 3D shade */
+.btn-3d-red {
+  background: linear-gradient(180deg, #b91c1c 0%, #991b1b 55%, #7f1d1d 100%);
+  box-shadow: 
+    0 3.5px 0 #581212,
+    0 6px 14px rgba(153, 27, 27, 0.48),
+    0 1px 1px rgba(255, 255, 255, 0.45) inset;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+.btn-3d-red:hover {
+  filter: brightness(1.08);
+}
+.btn-3d-red:active {
+  transform: translateY(3px) !important;
+  box-shadow: 
+    0 0.5px 0 #581212,
+    0 2px 5px rgba(153, 27, 27, 0.35),
+    0 1px 1px rgba(255, 255, 255, 0.2) inset;
+}
+
+.btn-3d-gold {
+  background: linear-gradient(180deg, #ecd8af 0%, #c9a460 50%, #a37930 100%);
+  box-shadow: 
+    0 3.5px 0 #6e4e1a,
+    0 6px 16px rgba(181, 139, 74, 0.45),
+    0 1px 1px rgba(255, 255, 255, 0.5) inset;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+.btn-3d-gold:hover {
+  filter: brightness(1.06);
+}
+.btn-3d-gold:active {
+  transform: translateY(3px) !important;
+  box-shadow: 
+    0 0.5px 0 #6e4e1a,
+    0 2px 5px rgba(181, 139, 74, 0.3),
+    0 1px 1px rgba(255, 255, 255, 0.2) inset;
+}
+
+/* Warm bronze-gold CTA button (#b89759) */
+.btn-3d-bronze-gold {
+  background: linear-gradient(180deg, #d8bf84 0%, #b89759 50%, #947434 100%);
+  box-shadow: 
+    0 3.5px 0 #6d5421,
+    0 6px 16px rgba(184, 151, 89, 0.45),
+    0 1px 1px rgba(255, 255, 255, 0.5) inset;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+.btn-3d-bronze-gold:hover {
+  filter: brightness(1.06);
+}
+.btn-3d-bronze-gold:active {
+  transform: translateY(3px) !important;
+  box-shadow: 
+    0 0.5px 0 #6d5421,
+    0 2px 5px rgba(184, 151, 89, 0.3),
+    0 1px 1px rgba(255, 255, 255, 0.2) inset;
+}
+
+/* 3D Gold Numbers Styling (01, 02, 03, 04) */
+.card-number {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 28px;
+  background: linear-gradient(135deg, #f3e5ab 0%, #c5a059 50%, #8c6d33 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(1px 2px 1px rgba(0, 0, 0, 0.15)) drop-shadow(0px 4px 8px rgba(197, 160, 89, 0.3));
+}
+
+.btn-3d-green {
+  background: linear-gradient(180deg, #32eb77 0%, #25D366 50%, #179b4a 100%);
+  box-shadow: 
+    0 3.5px 0 #0d6e3c,
+    0 6px 14px rgba(37, 211, 102, 0.4),
+    0 1px 1px rgba(255, 255, 255, 0.45) inset;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+.btn-3d-green:hover {
+  filter: brightness(1.06);
+}
+.btn-3d-green:active {
+  transform: translateY(3px) !important;
+  box-shadow: 
+    0 0.5px 0 #0d6e3c,
+    0 2px 5px rgba(37, 211, 102, 0.25),
+    0 1px 1px rgba(255, 255, 255, 0.2) inset;
+}
+
+.shimmer-badge {
+  background: linear-gradient(
+    90deg,
+    rgba(181, 139, 74, 0.15) 0%,
+    rgba(217, 191, 140, 0.35) 50%,
+    rgba(181, 139, 74, 0.15) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmerWaveEffect 3.5s ease-in-out infinite;
+}
+
+/* ---------------------------------------------------- */
+/* ARCHITECTURAL WOOD SLATS & 3D VOLUMETRIC COLOR SHIFTS */
+/* ---------------------------------------------------- */
+@keyframes heroVolumetricShift {
+  0% {
+    background-position: 0% 40%;
+  }
+  50% {
+    background-position: 100% 60%;
+  }
+  100% {
+    background-position: 0% 40%;
+  }
+}
+
+.volumetric-3d-gradient {
+  background: linear-gradient(
+    135deg,
+    rgba(217, 191, 140, 0.18) 0%,
+    rgba(92, 64, 34, 0.22) 28%,
+    rgba(34, 37, 42, 0.45) 55%,
+    rgba(217, 191, 140, 0.14) 80%,
+    rgba(40, 44, 52, 0.35) 100%
+  );
+  background-size: 250% 250%;
+  animation: heroVolumetricShift 12s ease-in-out infinite;
+}
+
+.wood-slats-backdrop {
+  background-image: repeating-linear-gradient(
+    90deg,
+    rgba(48, 33, 23, 0.32) 0px,
+    rgba(58, 40, 28, 0.32) 10px,
+    rgba(20, 16, 13, 0.75) 10px,
+    rgba(14, 11, 9, 0.88) 14px
+  );
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.font-serif-display,
+.font-playfair {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.font-sans-clean,
+.font-jakarta {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Editorial Hero Text Transition */
+@keyframes heroTextReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-hero-reveal {
+  animation: heroTextReveal 0.65s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* ---------------------------------------------------- */
+/* 3D LUXURY MOVING GRADIENT & ORB GLOW ANIMATIONS      */
+/* ---------------------------------------------------- */
+@keyframes orbFloatPrimary {
+  0% {
+    transform: translate(0px, 0px) scale(1) rotate(0deg);
+  }
+  25% {
+    transform: translate(45px, -35px) scale(1.18) rotate(6deg);
+  }
+  50% {
+    transform: translate(-30px, 40px) scale(0.92) rotate(-4deg);
+  }
+  75% {
+    transform: translate(35px, 20px) scale(1.1) rotate(3deg);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1) rotate(0deg);
+  }
+}
+
+@keyframes orbFloatSecondary {
+  0% {
+    transform: translate(0px, 0px) scale(1) rotate(0deg);
+  }
+  30% {
+    transform: translate(-50px, 40px) scale(1.15) rotate(-8deg);
+  }
+  60% {
+    transform: translate(40px, -35px) scale(0.9) rotate(5deg);
+  }
+  85% {
+    transform: translate(-25px, -20px) scale(1.08) rotate(-3deg);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1) rotate(0deg);
+  }
+}
+
+@keyframes orbFloatTertiary {
+  0% {
+    transform: translate(0px, 0px) scale(0.95);
+  }
+  40% {
+    transform: translate(60px, 35px) scale(1.22);
+  }
+  75% {
+    transform: translate(-45px, -30px) scale(1.05);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(0.95);
+  }
+}
+
+@keyframes gradientMeshFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-orb-primary {
+  animation: orbFloatPrimary 13s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-orb-secondary {
+  animation: orbFloatSecondary 16s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-orb-tertiary {
+  animation: orbFloatTertiary 11s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-mesh-gradient {
+  background-size: 300% 300%;
+  animation: gradientMeshFlow 8s ease-in-out infinite;
+}
+
+/* ---------------------------------------------------- */
+/* 3D LUXURY DUAL-DIRECTION INFINITE MARQUEE STRIPS     */
+/* ---------------------------------------------------- */
+@keyframes marqueeScrollLeft {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes marqueeScrollRight {
+  0% {
+    transform: translate3d(-50%, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.animate-marquee-left {
+  display: flex;
+  width: max-content;
+  animation: marqueeScrollLeft 36s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee-right {
+  display: flex;
+  width: max-content;
+  animation: marqueeScrollRight 40s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee-left:hover,
+.animate-marquee-right:hover,
+.marquee-paused {
+  animation-play-state: paused !important;
+}
+
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spinSlow 24s linear infinite;
+}
+
+/* ---------------------------------------------------- */
+/* WEBSITE TYPOGRAPHY & ELEMENT STYLE GUIDE             */
+/* ---------------------------------------------------- */
+/* WEBSITE TYPOGRAPHY & ELEMENT STYLE GUIDE (UNIVERSAL) */
+/* ---------------------------------------------------- */
+
+/* 1. All Pre-Headings across the whole website (all pages & subpages):
+   Font: Plus Jakarta Sans (Uppercase, tracking 2.5px, weight 600, size 13px).
+   Color: Metallic Gold (#c5a059). */
+.pre-heading,
+[data-preheading="true"],
+.text-eyebrow,
+.eyebrow,
+div[class*="tracking-widest"]:not(h1):not(h2):not(h3),
+div[class*="tracking-wider"]:not(h1):not(h2):not(h3),
+span[class*="tracking-widest"],
+span[class*="tracking-wider"],
+p[class*="tracking-widest"],
+p[class*="tracking-wider"],
+span.uppercase.text-xs,
+span.uppercase.text-\[11px\],
+span.uppercase.text-\[10px\],
+span.uppercase.text-\[12px\],
+span.uppercase.text-\[13px\] {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  text-transform: uppercase !important;
+  letter-spacing: 2.5px !important;
+  font-weight: 600 !important;
+  font-size: 13px !important;
+  color: #c5a059 !important;
+}
+
+.pre-heading *,
+[data-preheading="true"] *,
+.text-eyebrow *,
+.eyebrow * {
+  color: #c5a059 !important;
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  letter-spacing: 2.5px !important;
+}
+
+/* 2. All Main Headings across the whole website (all pages & subpages):
+   Font: Playfair Display (Weight 500 / serif italic-regular blend).
+   Color: Crisp Off-White / Cream (#f4f4f0) against dark emerald background. */
+h1,
+h2,
+.main-heading,
+.font-serif-display,
+.font-playfair {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-weight: 500 !important;
+  letter-spacing: -0.015em;
+}
+
+/* Crisp Off-White / Cream (#f4f4f0) against dark emerald or dark backgrounds */
+.bg-\[\#142621\] h1,
+.bg-\[\#142621\] h2,
+.bg-\[\#17362f\] h1,
+.bg-\[\#17362f\] h2,
+.bg-\[\#0d1613\] h1,
+.bg-\[\#0d1613\] h2,
+.bg-\[\#1c1917\] h1,
+.bg-\[\#1c1917\] h2,
+.bg-stone-900 h1,
+.bg-stone-900 h2,
+.bg-emerald-950 h1,
+.bg-emerald-950 h2,
+[class*="bg-[#142621]"] h1,
+[class*="bg-[#142621]"] h2,
+[class*="bg-[#17362f]"] h1,
+[class*="bg-[#17362f]"] h2,
+[class*="bg-[#0d1613]"] h1,
+[class*="bg-[#0d1613]"] h2,
+[class*="bg-[#1c1917]"] h1,
+[class*="bg-[#1c1917]"] h2,
+[data-theme="dark"] h1,
+[data-theme="dark"] h2 {
+  color: #f4f4f0 !important;
+}
+
+/* 3. All Descriptions, Paragraphs & Subheadings across the whole website:
+   Font: Plus Jakarta Sans (Weight 400 for body text, 600 for subheadings).
+   Color: Muted soft gray-beige (#d1d1d6) against dark emerald. */
+p,
+.body-desc,
+.text-body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  font-weight: 400 !important;
+}
+
+h3,
+h4,
+h5,
+h6,
+.sub-heading,
+.subheading {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  font-weight: 600 !important;
+}
+
+/* Muted soft gray-beige (#d1d1d6) against dark emerald & dark containers */
+.bg-\[\#142621\] p,
+.bg-\[\#17362f\] p,
+.bg-\[\#0d1613\] p,
+.bg-\[\#1c1917\] p,
+.bg-stone-900 p,
+.bg-emerald-950 p,
+[class*="bg-[#142621]"] p,
+[class*="bg-[#17362f]"] p,
+[class*="bg-[#0d1613]"] p,
+[class*="bg-[#1c1917]"] p,
+[data-theme="dark"] p {
+  color: #d1d1d6 !important;
+}
+
+.bg-\[\#142621\] h3,
+.bg-\[\#142621\] h4,
+.bg-\[\#17362f\] h3,
+.bg-\[\#17362f\] h4,
+.bg-\[\#0d1613\] h3,
+.bg-\[\#0d1613\] h4,
+.bg-\[\#1c1917\] h3,
+.bg-\[\#1c1917\] h4,
+[class*="bg-[#142621]"] h3,
+[class*="bg-[#142621]"] h4,
+[class*="bg-[#17362f]"] h3,
+[class*="bg-[#17362f]"] h4 {
+  color: #f4f4f0 !important;
+}
+
+/* 4. Card Numerals (01, 02, 03, 04):
+   Font: Playfair Display (Weight 700, bold serif).
+   Color/Style: 3D Shiny Metallic Gold gradient (#f3e5ab to #c5a059 and #8c6d33) with soft drop-shadow depth. */
+.card-numeral,
+.card-number,
+.numeral-gold-3d,
+[data-card-numeral="true"] {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-weight: 700 !important;
+  background: linear-gradient(135deg, #f3e5ab 0%, #c5a059 50%, #8c6d33 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.45)) !important;
+  display: inline-block;
+}
+
+/* 5. Buttons across the whole website (all pages & subpages):
+   Font: Plus Jakarta Sans (Weight 600, medium-tight letter spacing).
+   Color/Style: 3D Real gradient fill with glossy sheen, subtle beveling, and interactive elevation on hover.
+   Preserves underlying button color while making them real 3D shiny buttons. */
+button,
+.btn,
+a.btn,
+a[role="button"] {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.015em !important;
+}
+
+button:not(.btn-plain):not(.floating-pill-glass-header *),
+.btn-3d,
+a.btn-3d {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.22s cubic-bezier(0.2, 0.8, 0.4, 1), box-shadow 0.22s cubic-bezier(0.2, 0.8, 0.4, 1), filter 0.2s ease !important;
+  box-shadow: 
+    0 2.5px 6px rgba(0, 0, 0, 0.18),
+    0 1px 0 rgba(255, 255, 255, 0.28) inset,
+    0 -1.5px 0 rgba(0, 0, 0, 0.22) inset !important;
+}
+
+/* Glossy top bevel sheen highlight overlay */
+button:not(.btn-plain):not(.floating-pill-glass-header *)::before,
+.btn-3d::before,
+a.btn-3d::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 48%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.05) 85%, transparent 100%);
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Interactive 3D elevation and specular shine on hover */
+button:not(.btn-plain):not(.floating-pill-glass-header *):hover,
+.btn-3d:hover,
+a.btn-3d:hover {
+  transform: translateY(-2px) !important;
+  filter: brightness(1.08) !important;
+  box-shadow:
+    0 9px 24px -4px rgba(0, 0, 0, 0.32),
+    0 0 0 1px rgba(255, 255, 255, 0.25) inset,
+    0 1.5px 0 rgba(255, 255, 255, 0.48) inset,
+    0 -1px 0 rgba(0, 0, 0, 0.25) inset !important;
+}
+
+/* Interactive pressed state */
+button:not(.btn-plain):not(.floating-pill-glass-header *):active,
+.btn-3d:active,
+a.btn-3d:active {
+  transform: translateY(1px) !important;
+  filter: brightness(0.96) !important;
+  box-shadow:
+    0 2px 6px -1px rgba(0, 0, 0, 0.35),
+    0 2px 4px rgba(0, 0, 0, 0.25) inset !important;
+}
+
+/* Modal and transition animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.2s ease-out forwards;
+}
+
+.animate-scaleIn {
+  animation: scaleIn 0.24s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Alive Hero Slider Cinematic Animations */
+@keyframes aliveKenBurns {
+  0% {
+    transform: scale(1) translate(0, 0);
+  }
+  50% {
+    transform: scale(1.08) translate(-1%, -0.8%);
+  }
+  100% {
+    transform: scale(1.12) translate(1%, 0.5%);
+  }
+}
+
+.animate-ken-burns {
+  animation: aliveKenBurns 8s ease-in-out alternate infinite;
+  will-change: transform;
+}
+
+@keyframes shimmerLightSweep {
+  0% {
+    transform: translateX(-120%) rotate(25deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 0.15;
+  }
+  70% {
+    transform: translateX(220%) rotate(25deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(220%) rotate(25deg);
+    opacity: 0;
+  }
+}
+
+.animate-shimmer-sweep {
+  animation: shimmerLightSweep 9s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@keyframes liveGlowPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(197, 160, 89, 0.45);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 14px 4px rgba(197, 160, 89, 0.7);
+    transform: scale(1.04);
+  }
+}
+
+.animate-live-pulse {
+  animation: liveGlowPulse 2.8s infinite ease-in-out;
+}
+
+@keyframes heroSlideInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(18px) scale(0.985);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-hero-stagger-1 {
+  animation: heroSlideInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-hero-stagger-2 {
+  animation: heroSlideInUp 0.75s cubic-bezier(0.16, 1, 0.3, 1) 0.08s forwards;
+  opacity: 0;
+}
+
+.animate-hero-stagger-3 {
+  animation: heroSlideInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.16s forwards;
+  opacity: 0;
+}
+
+.animate-hero-stagger-4 {
+  animation: heroSlideInUp 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.24s forwards;
+  opacity: 0;
+}
+
+/* ========================================================================= */
+/* FLUID 2K / 4K / WIDE OFFICE DESKTOP & PROJECTOR RESPONSIVE ARCHITECTURE   */
+/* Eliminates restrictive narrow-gutters without stretching content to 100% */
+/* ========================================================================= */
+@media (min-width: 1536px) {
+  .max-w-7xl {
+    max-width: 1480px !important;
+  }
+  .max-w-6xl {
+    max-width: 1360px !important;
+  }
+  .max-w-5xl {
+    max-width: 1240px !important;
+  }
+}
+
+@media (min-width: 1728px) {
+  .max-w-7xl {
+    max-width: 1640px !important;
+  }
+  .max-w-6xl {
+    max-width: 1480px !important;
+  }
+  .max-w-5xl {
+    max-width: 1340px !important;
+  }
+}
+
+@media (min-width: 1920px) {
+  .max-w-7xl {
+    max-width: 1820px !important;
+  }
+  .max-w-6xl {
+    max-width: 1640px !important;
+  }
+  .max-w-5xl {
+    max-width: 1440px !important;
+  }
+}
+
+@media (min-width: 2200px) {
+  .max-w-7xl {
+    max-width: 2080px !important;
+  }
+  .max-w-6xl {
+    max-width: 1860px !important;
+  }
+  .max-w-5xl {
+    max-width: 1620px !important;
+  }
+}
+
+@media (min-width: 2560px) {
+  .max-w-7xl {
+    max-width: 2360px !important;
+  }
+  .max-w-6xl {
+    max-width: 2100px !important;
+  }
+  .max-w-5xl {
+    max-width: 1820px !important;
+  }
+}
+
+@media (min-width: 3200px) {
+  .max-w-7xl {
+    max-width: 2880px !important;
+  }
+  .max-w-6xl {
+    max-width: 2520px !important;
+  }
+  .max-w-5xl {
+    max-width: 2160px !important;
+  }
+}
+
+/* 8K Cinematic Golden Sun Ray Passing Animation */
+@keyframes periodicSunRayPass {
+  0% {
+    transform: translateX(-120%) translateY(-25%) rotate(32deg);
+    opacity: 0;
+  }
+  12% {
+    opacity: 0.85;
+  }
+  38% {
+    transform: translateX(160%) translateY(25%) rotate(32deg);
+    opacity: 0.85;
+  }
+  50% {
+    transform: translateX(220%) translateY(35%) rotate(32deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(220%) translateY(35%) rotate(32deg);
+    opacity: 0;
+  }
+}
+
+.animate-sun-ray {
+  animation: periodicSunRayPass 9.5s cubic-bezier(0.25, 1, 0.5, 1) infinite;
+  will-change: transform, opacity;
+}
+
+@keyframes sunSourceGlow {
+  0%, 100% {
+    opacity: 0.45;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.12);
+  }
+}
+
+.animate-sun-source {
+  animation: sunSourceGlow 6s ease-in-out infinite;
+}
+
+
+
+

@@ -1,0 +1,63 @@
+[
+  {
+    "userId": "Hero Slider Editor",
+    "userEmail": "Hero Slider Editor",
+    "action": "HERO_SLIDER_PHOTO_UPDATED",
+    "entityType": "Sections",
+    "details": "Updated Hero Slider photo for slide #1",
+    "ip": "127.0.0.1",
+    "id": "audit-1789631680872-jga3u",
+    "timestamp": "2026-09-17T07:54:40.872Z"
+  },
+  {
+    "userId": "user-admin-1",
+    "userEmail": "admin@jsgrealestate.ae",
+    "action": "LOGIN_SUCCESS",
+    "entityType": "Auth",
+    "details": "Successful admin login from IP 127.0.0.1",
+    "ip": "127.0.0.1",
+    "id": "audit-1789218281536-ak4zr",
+    "timestamp": "2026-09-12T13:04:41.536Z"
+  },
+  {
+    "userId": "user-admin-1",
+    "userEmail": "admin@jsgrealestate.ae",
+    "action": "LOGIN_SUCCESS",
+    "entityType": "Auth",
+    "details": "Successful admin login from IP 127.0.0.1",
+    "ip": "127.0.0.1",
+    "id": "audit-1789218197943-7kyli",
+    "timestamp": "2026-09-12T13:03:17.943Z"
+  },
+  {
+    "userId": "user-admin-1",
+    "userEmail": "admin@jsgrealestate.ae",
+    "action": "LOGIN_SUCCESS",
+    "entityType": "Auth",
+    "details": "Successful admin login from IP 127.0.0.1",
+    "ip": "127.0.0.1",
+    "id": "audit-1789218152892-4cbio",
+    "timestamp": "2026-09-12T13:02:32.892Z"
+  },
+  {
+    "userId": "user-admin-1",
+    "userEmail": "admin@jsgrealestate.ae",
+    "action": "LOGIN_SUCCESS",
+    "entityType": "Auth",
+    "details": "Successful admin login from IP 127.0.0.1",
+    "ip": "127.0.0.1",
+    "id": "audit-1789218150298-ipr1p",
+    "timestamp": "2026-09-12T13:02:30.298Z"
+  },
+  {
+    "userId": "system",
+    "userEmail": "system",
+    "action": "USER_INITIALIZED",
+    "entityType": "User",
+    "entityId": "user-admin-1",
+    "details": "Initialized default super_admin account: admin@jsgrealestate.ae",
+    "ip": "127.0.0.1",
+    "id": "audit-1789217960208-0bz4l",
+    "timestamp": "2026-09-12T12:59:20.208Z"
+  }
+]

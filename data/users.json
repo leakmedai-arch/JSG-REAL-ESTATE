@@ -1,0 +1,15 @@
+[
+  {
+    "id": "user-admin-1",
+    "username": "maleeka",
+    "email": "admin@jsgrealestate.ae",
+    "passwordHash": "b00c5df53dc642c5b49ed71ce472c5196368b1cccba7407015909cc53626d272e3067dcca4c781121e8a91980dda355c1a62d8ccdd20d13be990676224a8c913",
+    "salt": "8ddc41ae649877eb4e9b2643cdc78ba8",
+    "role": "super_admin",
+    "name": "Maleeka",
+    "is2faEnabled": false,
+    "failedLoginAttempts": 0,
+    "createdAt": "2026-09-12T12:59:20.208Z",
+    "lastLogin": "2026-09-19T07:10:56.592Z"
+  }
+]

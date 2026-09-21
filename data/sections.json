@@ -1,0 +1,215 @@
+{
+  "founder": {
+    "name": "JASMEET SINGH GULATI",
+    "title": "Founder & Chief Executive Officer",
+    "subtitle": "15+ Years Driving Institutional & Ultra-Luxury UAE Real Estate Acquisitions",
+    "experienceYears": 15,
+    "dealsVolume": "AED 4.8B+",
+    "typewriterPhrases": [
+      "Institutional Asset Advisory & Private Off-Market Acquisitions",
+      "Dubai Trophy Penthouses & Waterfront Signature Mansions",
+      "High-Yield Portfolios Delivering Consistent 8–11% ROI"
+    ],
+    "executiveStatement": "At JSG Real Estate, our philosophy transcends conventional transactions. We curate generational assets for visionary individuals who view Dubai as the preeminent luxury metropolis of the modern world.",
+    "detailedBio": "Jasmeet Singh Gulati founded JSG Real Estate with an uncompromising focus on discretion, analytical precision, and fiduciary integrity. Having directed over AED 4.8 Billion in high-profile residential and commercial transactions across Downtown Dubai, Palm Jumeirah, and Emirates Hills, Jasmeet serves as the trusted property advisor to international family offices and discerning private investors.",
+    "portraitImage": "/assets/founder.jpg",
+    "credentials": [
+      "RERA Certified Real Estate Broker",
+      "DLD Gold Tier Agency Principal",
+      "15+ Years UAE Market Leadership"
+    ]
+  },
+  "heroSlides": [
+    {
+      "id": "slide-1",
+      "tag": "Trophy Residence",
+      "title": "Palm Jumeirah Waterfrond Villa",
+      "subtitle": "Direct beach access, infinity pool overlooking Dubai Marina skyline, and bespoke Italian furnishings.",
+      "location": "Frond G, Palm Jumeirah",
+      "priceAed": 28500000,
+      "beds": 6,
+      "baths": 7,
+      "areaSqft": 8400,
+      "image": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1920&q=90",
+      "link": "/buy",
+      "active": true,
+      "order": 1
+    },
+    {
+      "id": "slide-2",
+      "tag": "Downtown Skyline",
+      "title": "The Royal Marina Residence",
+      "subtitle": "Floor-to-ceiling glass panorama, private yacht dock access, and marble craftsmanship throughout.",
+      "location": "Dubai Marina",
+      "priceAed": 3850000,
+      "beds": 3,
+      "baths": 4,
+      "areaSqft": 2150,
+      "image": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1920&q=90",
+      "link": "/buy",
+      "active": true,
+      "order": 2
+    },
+    {
+      "id": "slide-3",
+      "tag": "Golf Sanctuary",
+      "title": "Dubai Hills Parkway Mansion",
+      "subtitle": "Overlooking championship 18-hole golf fairways with private rooftop observatory and landscaped courtyard.",
+      "location": "Dubai Hills Estate",
+      "priceAed": 19800000,
+      "beds": 5,
+      "baths": 6,
+      "areaSqft": 7200,
+      "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=90",
+      "link": "/buy",
+      "active": true,
+      "order": 3
+    }
+  ],
+  "showcaseSlides": [
+    {
+      "id": "founder-1",
+      "url": "/assets/founder.jpg",
+      "title": "JSG Executive Leadership",
+      "subtitle": "Founder & Managing Director",
+      "tag": "Leadership"
+    },
+    {
+      "id": "suite-2",
+      "url": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85",
+      "title": "Private Advisory Suite",
+      "subtitle": "High-Net-Worth Advisory Lounge, Downtown Dubai",
+      "tag": "Private Office"
+    },
+    {
+      "id": "penthouse-3",
+      "url": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=85",
+      "title": "Palm Jumeirah Signature Villa",
+      "subtitle": "Private Beachfront Key Handover Ceremony",
+      "tag": "Curated Handover"
+    },
+    {
+      "id": "mansion-4",
+      "url": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=85",
+      "title": "Fairway Vistas Championship Estate",
+      "subtitle": "Dubai Hills Prime Architectural Masterpiece",
+      "tag": "Trophy Estate"
+    }
+  ],
+  "infiniteCardsRow1": [
+    {
+      "id": "dubai-bg-1",
+      "title": "Palm Jumeirah Signature Beachfront Villa",
+      "image": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80",
+      "defaultImage": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80",
+      "price": "AED 28.5M",
+      "area": "Palm Jumeirah, Dubai"
+    },
+    {
+      "id": "dubai-bg-2",
+      "title": "Burj Crown Sky Penthouse",
+      "image": "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=800&q=80",
+      "defaultImage": "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=800&q=80",
+      "price": "AED 16.5M",
+      "area": "Downtown Dubai"
+    },
+    {
+      "id": "dubai-bg-3",
+      "title": "Fairway Vistas Championship Mansion",
+      "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
+      "defaultImage": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80",
+      "price": "AED 24.2M",
+      "area": "Dubai Hills Estate"
+    },
+    {
+      "id": "dubai-bg-4",
+      "title": "The Royal Marina High-Altitude Suite",
+      "image": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80",
+      "defaultImage": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80",
+      "price": "AED 5.85M",
+      "area": "Dubai Marina"
+    },
+    {
+      "id": "dubai-bg-5",
+      "title": "District One Crystal Lagoon Villa",
+      "image": "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=800&q=80",
+      "defaultImage": "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=800&q=80",
+      "price": "AED 21.0M",
+      "area": "MBR City, Dubai"
+    },
+    {
+      "id": "dubai-bg-6",
+      "title": "One Canal Waterfront Luxury Sky Villa",
+      "image": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80",
+      "defaultImage": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80",
+      "price": "AED 19.5M",
+      "area": "Dubai Water Canal"
+    }
+  ],
+  "infiniteCardsRow2": [
+    {
+      "id": "dubai-bg-7",
+      "title": "Jumeirah Bay Island Bulgari Mansion",
+      "image": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80",
+      "defaultImage": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80",
+      "price": "AED 55.0M",
+      "area": "Jumeirah Bay Island, Dubai"
+    },
+    {
+      "id": "dubai-bg-8",
+      "title": "Atlantis The Royal Palm Crescent Suite",
+      "image": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=800&q=80",
+      "defaultImage": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=800&q=80",
+      "price": "AED 34.0M",
+      "area": "Palm Jumeirah, Dubai"
+    },
+    {
+      "id": "dubai-bg-9",
+      "title": "Emirates Hills Montgomerie Villa",
+      "image": "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=800&q=80",
+      "defaultImage": "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=800&q=80",
+      "price": "AED 38.5M",
+      "area": "Emirates Hills, Dubai"
+    },
+    {
+      "id": "dubai-bg-10",
+      "title": "Il Primo Opera Grand Penthouse",
+      "image": "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=800&q=80",
+      "defaultImage": "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=800&q=80",
+      "price": "AED 22.0M",
+      "area": "Downtown Dubai"
+    },
+    {
+      "id": "dubai-bg-11",
+      "title": "Bluewaters Bay Island Residence",
+      "image": "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=800&q=80",
+      "defaultImage": "https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=800&q=80",
+      "price": "AED 8.4M",
+      "area": "Bluewaters Island, Dubai"
+    },
+    {
+      "id": "dubai-bg-12",
+      "title": "Al Barari Botanical Luxury Estate",
+      "image": "https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?auto=format&fit=crop&w=800&q=80",
+      "defaultImage": "https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?auto=format&fit=crop&w=800&q=80",
+      "price": "AED 17.5M",
+      "area": "Al Barari, Dubai"
+    }
+  ],
+  "hero3dSettings": {
+    "enabled": true,
+    "autoRotate": true,
+    "rotationSpeed": 1,
+    "fov": 45
+  },
+  "quickCardsVisible": true,
+  "liveBannerVisible": true,
+  "featuredPropertiesVisible": true,
+  "developersStripVisible": true,
+  "communitiesStripVisible": true,
+  "version": 2,
+  "updatedAt": "2026-09-17T07:54:40.871Z",
+  "heroSliderPhotos": {
+    "1": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=2000&q=90"
+  }
+}

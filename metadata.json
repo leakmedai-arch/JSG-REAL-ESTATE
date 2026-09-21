@@ -1,0 +1,6 @@
+{
+  "name": "JSG Real Estate Dubai & Live Showcase",
+  "description": "Luxury Dubai real estate website with interactive property listings, live video walk-through broadcasts, and instant WhatsApp booking.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
