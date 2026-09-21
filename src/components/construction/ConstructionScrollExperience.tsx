@@ -277,7 +277,7 @@ export const ConstructionScrollExperience: React.FC<ConstructionScrollExperience
       >
         {/* VIDEO BACKGROUND (Permanent High-Definition Architectural Canvas) */}
         <div className="absolute inset-0 w-full h-full bg-[#0d1613] z-10 overflow-hidden"> 
-          <video
+         <video
   ref={videoRef}
   key={activeVideoSrc}
   src={activeVideoSrc}
