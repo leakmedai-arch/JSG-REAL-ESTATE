@@ -42,8 +42,8 @@ const PARTNER_SUBTITLES = [
   'Managing Partner & Executive Director',
   'Founding Partner & Senior Managing Director',
   'Executive Partner & Managing Director',
-  'Senior Managing Partner & Director',
-  'Managing Partner & Advisory Director'
+  'Senior Managing Partners & Directors',
+  'Managing Partners & Advisory Director'
 ];
 
 const getSlideTitle = (_slide?: ShowcaseSlide) => {
@@ -64,28 +64,28 @@ const getSlideTag = (index: number = 0) => {
 const DEFAULT_SHOWCASE_SLIDES: ShowcaseSlide[] = [
   {
     id: 'founder-1',
-    url: '/assets/founder.jpg',
+    url: 'https://founder-1.jpg',
     title: 'JSG Executive Leadership',
     subtitle: 'Founder & Managing Director',
     tag: 'Executive Leadership'
   },
   {
     id: 'suite-2',
-    url: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85',
+    url: 'https://founder-3.jpg',
     title: 'JSG Executive Leadership',
     subtitle: 'Managing Partner & Executive Director',
     tag: 'Executive Partner'
   },
   {
     id: 'penthouse-3',
-    url: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=85',
+    url: 'https://founder-2.jpg',
     title: 'JSG Executive Leadership',
     subtitle: 'Founding Partner & Senior Managing Director',
     tag: 'Executive Partner'
   },
   {
     id: 'mansion-4',
-    url: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=85',
+    url: 'https://founder-4.jpg',
     title: 'JSG Executive Leadership',
     subtitle: 'Executive Partner & Managing Director',
     tag: 'Executive Partner'
