@@ -268,21 +268,7 @@ export const FounderSection: React.FC<FounderSectionProps> = ({ onNavigate }) =>
     });
   }
 
-  const customSlides = (sections.showcaseSlides && sections.showcaseSlides.length > 0)
-    ? (sections.showcaseSlides as ShowcaseSlide[])
-    : (dynamicSlides.length > 0 ? dynamicSlides : DEFAULT_SHOWCASE_SLIDES);
-
-  const slides: ShowcaseSlide[] = DEFAULT_SHOWCASE_SLIDES.map((defaultSlide, idx) => {
-    const s = customSlides[idx];
-    if (!s) return defaultSlide;
-    return {
-      ...defaultSlide,
-      url: s.url || defaultSlide.url,
-      title: s.title || defaultSlide.title,
-      subtitle: s.subtitle || defaultSlide.subtitle,
-      tag: s.tag || defaultSlide.tag
-    };
-  });
+  const slides: ShowcaseSlide[] = DEFAULT_SHOWCASE_SLIDES;
 
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
   const [autoSlideSpeed] = useState<number>(3400); // Fast, lively, luxury pacing

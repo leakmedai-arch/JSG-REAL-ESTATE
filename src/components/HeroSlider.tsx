@@ -105,26 +105,7 @@ interface HeroSliderProps {
 }
 
 export const HeroSlider: React.FC<HeroSliderProps> = ({ onNavigate }) => {
-  const { sections, tables, updateHeroSliderPhoto } = useSiteData();
-  const dbSlides = tables?.jsg_hero_slider;
-  const activeSlides = SLIDES.map((defaultSlide, idx) => {
-    const s = dbSlides?.[idx];
-    if (!s) return defaultSlide;
-    return {
-      ...defaultSlide,
-      tagline: s.subtitle || defaultSlide.tagline,
-      headline: s.title || defaultSlide.headline,
-      subheadline: s.subtitle || defaultSlide.subheadline,
-      propertyTitle: s.title || defaultSlide.propertyTitle,
-      location: s.location || defaultSlide.location,
-      price: s.price || defaultSlide.price,
-      stats: s.stats || defaultSlide.stats,
-      image: s.image_url || defaultSlide.image,
-      category: s.category || defaultSlide.category,
-      buttonTitle: s.cta1_text || defaultSlide.buttonTitle,
-      ctaPath: s.cta1_link || defaultSlide.ctaPath
-    };
-  });
+  const activeSlides = SLIDES;
 
   const [currentSlide, setCurrentSlide] = useState(0);
   const [searchTab, setSearchTab] = useState<'buy' | 'rent' | 'off-plan'>('buy');
@@ -138,20 +119,7 @@ export const HeroSlider: React.FC<HeroSliderProps> = ({ onNavigate }) => {
   const [isSpeakModalOpen, setIsSpeakModalOpen] = useState(false);
 
   const getSlideImage = (s: Slide) => {
-    return sections.heroSliderPhotos?.[s.id] || sections.heroSliderPhotos?.[String(s.id)] || s.image;
-  };
-
-  const handleHeroPhotoUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (!file) return;
-    const reader = new FileReader();
-    reader.onload = (event) => {
-      const result = event.target?.result as string;
-      if (result) {
-        updateHeroSliderPhoto(slide.id, result);
-      }
-    };
-    reader.readAsDataURL(file);
+    return s.image;
   };
 
   // Touch gesture tracking for mobile smooth swipe
