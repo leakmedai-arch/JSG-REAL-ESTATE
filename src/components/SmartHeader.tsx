@@ -171,7 +171,7 @@ export const SmartHeader: React.FC<SmartHeaderProps> = ({ currentPath, onNavigat
               {/* 3. Live Call with Agent: See Property In Real Time Before You Go */}
               <button
                 type="button"
-                onClick={() => setIsLiveAgentModalOpen(true)}
+                onClick={() => window.open('https://wa.me/97143202030?text=Hello%20JSG%20Real%20Estate,%20I%20would%20like%20a%20WhatsApp%20live%20call%20with%20an%20agent.', '_blank')}
                 className="flex items-center gap-2 px-3 py-1 rounded-full bg-red-600/30 hover:bg-red-600/50 border border-red-500/60 text-white transition-all cursor-pointer group/item shadow-sm"
                 title="Connect with agent in real-time video call to inspect property before you go"
               >
@@ -864,7 +864,7 @@ export const SmartHeader: React.FC<SmartHeaderProps> = ({ currentPath, onNavigat
           {/* Live Call with Agent Button: Emerald & Gold 3D Video Button */}
           <button
             type="button"
-            onClick={() => setIsLiveAgentModalOpen(true)}
+            onClick={() => window.open('https://wa.me/97143202030?text=Hello%20JSG%20Real%20Estate,%20I%20would%20like%20a%20WhatsApp%20live%20call%20with%20an%20agent.', '_blank')}
             className="flex items-center justify-center gap-1.5 h-8 px-2 sm:px-3 rounded-full text-[11px] sm:text-xs font-black text-[#0d221c] bg-gradient-to-r from-[#b58b4a] via-[#c5a059] to-[#d9bf8c] hover:brightness-110 tracking-wide cursor-pointer select-none whitespace-nowrap shrink-0 shadow-md border border-[#b58b4a]/60 hover:scale-102 transition-transform"
             title="Connect with Licensed Agent in Real-Time 4K Video Call to View Palace"
           >
@@ -1066,7 +1066,7 @@ export const SmartHeader: React.FC<SmartHeaderProps> = ({ currentPath, onNavigat
             <button
               onClick={() => {
                 setMobileMenuOpen(false);
-                setIsLiveAgentModalOpen(true);
+                window.open('https://wa.me/97143202030?text=Hello%20JSG%20Real%20Estate,%20I%20would%20like%20a%20WhatsApp%20live%20call%20with%20an%20agent.', '_blank');
               }}
               className="w-full py-3 rounded-xl bg-red-600 text-white font-bold text-xs flex items-center justify-center gap-2 shadow"
             >

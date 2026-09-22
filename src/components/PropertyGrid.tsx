@@ -244,7 +244,7 @@ export const PropertyGrid: React.FC<PropertyGridProps> = ({
                     type="button"
                     onClick={(e) => {
                       e.stopPropagation();
-                      setActiveLiveCallProperty(property);
+                      window.open(`https://wa.me/97143202030?text=Hello%20JSG%20Real%20Estate,%20I%20would%20like%20a%20WhatsApp%20live%20call%20with%20an%20agent%20regarding%20property%20%23${property.id}%20(${encodeURIComponent(property.title)}).`, '_blank');
                     }}
                     className="flex items-center gap-1.5 px-3 py-1.5 bg-gradient-to-r from-[#b58b4a] via-[#c5a059] to-[#d9bf8c] hover:brightness-110 text-[#0d221c] font-black text-xs rounded-xl shadow-lg transition-transform group-hover:scale-102 border border-[#b58b4a]/40"
                     title="Make 4K Live Video Call with Agent at this Palace"

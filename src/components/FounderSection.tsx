@@ -92,7 +92,7 @@ const DEFAULT_SHOWCASE_SLIDES: ShowcaseSlide[] = [
   },
   {
     id: 'estate-5',
-    url: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80',
+    url: '/founder-5.jpg',
     title: 'JSG Executive Leadership',
     subtitle: 'Senior Managing Director & Partner',
     tag: 'Executive Partner'

@@ -101,7 +101,7 @@ export const ConstructionScrollExperience: React.FC<ConstructionScrollExperience
   const durationRef = useRef<number>(10);
   const audioCtxRef = useRef<AudioContext | null>(null);
 
-  const activeVideoSrc = "https://i.imgur.com/pZYPmcR.mp4";
+  const activeVideoSrc = "/construction.mp4";
   const experienceData = sections?.constructionExperience || {};
   const preHeadingText = experienceData.preHeading || 'Architectural Genesis · Dubai';
   const headingText = experienceData.heading || 'Witness Masterpiece Realization';
