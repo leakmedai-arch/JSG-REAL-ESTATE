@@ -423,10 +423,6 @@ function MainLayout() {
               <p className="text-xs text-[#e2d9cd] leading-relaxed max-w-sm">
                 {footerData.description}
               </p>
-              <div className="pt-1 text-xs text-[#d9bf8c] font-semibold flex items-center gap-1.5 flex-wrap">
-                <ShieldCheck className="w-4 h-4 text-[#34d399] shrink-0" />
-                <span>RERA License: {reraNum} · DLD Verified</span>
-              </div>
             </div>
 
             {/* Column 2: Prime Communities */}

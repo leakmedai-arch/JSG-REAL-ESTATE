@@ -89,6 +89,13 @@ const DEFAULT_SHOWCASE_SLIDES: ShowcaseSlide[] = [
     title: 'JSG Executive Leadership',
     subtitle: 'Executive Partner & Managing Director',
     tag: 'Executive Partner'
+  },
+  {
+    id: 'estate-5',
+    url: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80',
+    title: 'JSG Executive Leadership',
+    subtitle: 'Senior Managing Director & Partner',
+    tag: 'Executive Partner'
   }
 ];
 
@@ -216,6 +223,23 @@ export const FounderSection: React.FC<FounderSectionProps> = ({ onNavigate }) =>
   const [displayedText, setDisplayedText] = useState('');
   const [isTyping, setIsTyping] = useState(true);
 
+  const handleFounderSlideUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = (event) => {
+      const result = event.target?.result as string;
+      if (result) {
+        const updated = [...slides];
+        if (updated[currentSlideIndex]) {
+          updated[currentSlideIndex] = { ...updated[currentSlideIndex], url: result };
+          updateShowcaseSlides(updated);
+        }
+      }
+    };
+    reader.readAsDataURL(file);
+  };
+
   // Multi-Photo Showcase Slider State (Hydrated from central server with default fallback)
   const dbFounders = tables?.jsg_founders;
   const dbFounderSlider = tables?.jsg_founder_slider;
@@ -244,11 +268,21 @@ export const FounderSection: React.FC<FounderSectionProps> = ({ onNavigate }) =>
     });
   }
 
-  const slides: ShowcaseSlide[] = dynamicSlides.length > 0
-    ? dynamicSlides
-    : ((sections.showcaseSlides && sections.showcaseSlides.length > 0)
-        ? (sections.showcaseSlides as ShowcaseSlide[])
-        : DEFAULT_SHOWCASE_SLIDES);
+  const customSlides = (sections.showcaseSlides && sections.showcaseSlides.length > 0)
+    ? (sections.showcaseSlides as ShowcaseSlide[])
+    : (dynamicSlides.length > 0 ? dynamicSlides : DEFAULT_SHOWCASE_SLIDES);
+
+  const slides: ShowcaseSlide[] = DEFAULT_SHOWCASE_SLIDES.map((defaultSlide, idx) => {
+    const s = customSlides[idx];
+    if (!s) return defaultSlide;
+    return {
+      ...defaultSlide,
+      url: s.url || defaultSlide.url,
+      title: s.title || defaultSlide.title,
+      subtitle: s.subtitle || defaultSlide.subtitle,
+      tag: s.tag || defaultSlide.tag
+    };
+  });
 
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
   const [autoSlideSpeed] = useState<number>(3400); // Fast, lively, luxury pacing
@@ -622,7 +656,7 @@ export const FounderSection: React.FC<FounderSectionProps> = ({ onNavigate }) =>
                           </div>
 
                           {/* Slide Counter Badge */}
-                          <div className="inline-flex items-center gap-1.5">
+                          <div className="inline-flex items-center gap-2">
                             <span className="px-3 py-1 rounded-full bg-black/70 backdrop-blur-md text-[11px] font-mono font-bold text-[#d9bf8c] border border-white/20 shadow-md">
                               0{currentSlideIndex + 1} / 0{slides.length}
                             </span>

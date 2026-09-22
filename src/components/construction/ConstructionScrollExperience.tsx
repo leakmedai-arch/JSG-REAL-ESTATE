@@ -84,7 +84,7 @@ const PERMANENT_VIDEO_SRC = '/construction.mp4?v=3';
 export const ConstructionScrollExperience: React.FC<ConstructionScrollExperienceProps> = ({ 
   onNavigate
 }) => {
-  const { sections, tables } = useSiteData();
+  const { sections, tables, updateConstructionVideoUrl } = useSiteData();
   const containerRef = useRef<HTMLDivElement>(null);
   const viewportRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -102,11 +102,24 @@ export const ConstructionScrollExperience: React.FC<ConstructionScrollExperience
   const audioCtxRef = useRef<AudioContext | null>(null);
 
   const scrollVideoRow = tables?.jsg_scroll_video?.[0];
-  const activeVideoSrc = "https://i.imgur.com/pZYPmcR.mp4";
+  const activeVideoSrc = sections?.constructionVideoUrl || scrollVideoRow?.video_url || "https://i.imgur.com/pZYPmcR.mp4";
   const experienceData = sections?.constructionExperience || {};
   const preHeadingText = experienceData.preHeading || 'Architectural Genesis · Dubai';
   const headingText = scrollVideoRow?.overlay_text || experienceData.heading || 'Witness Masterpiece Realization';
   const descriptionText = experienceData.description || 'Scroll down to advance structural engineering forward; scroll up to reverse the physical assembly timeline.';
+
+  const handleVideoUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = (event) => {
+      const result = event.target?.result as string;
+      if (result) {
+        updateConstructionVideoUrl(result);
+      }
+    };
+    reader.readAsDataURL(file);
+  };
 
   // Check prefers-reduced-motion
   useEffect(() => {
@@ -278,16 +291,17 @@ export const ConstructionScrollExperience: React.FC<ConstructionScrollExperience
         {/* VIDEO BACKGROUND (Permanent High-Definition Architectural Canvas) */}
         <div className="absolute inset-0 w-full h-full bg-[#0d1613] z-10 overflow-hidden"> 
          <video
-  ref={videoRef}
-  key={activeVideoSrc}
-  src={activeVideoSrc}
-  autoPlay
-  muted
-  loop
-  playsInline
-  preload="auto"
-  className="w-full h-full object-cover"
-/>
+           ref={videoRef}
+           key={activeVideoSrc}
+           src={activeVideoSrc}
+           muted
+           playsInline
+           preload="auto"
+           onLoadedMetadata={handleLoadedMetadata}
+           onSeeking={handleSeeking}
+           onSeeked={handleSeeked}
+           className="w-full h-full object-cover"
+         />
 
           {/* Delicate subtle architectural vignette (preserves raw footage and building transformation visibility) */}
           <div className="absolute inset-0 bg-gradient-to-t from-[#0d1613]/85 via-transparent to-[#0d1613]/50 pointer-events-none" />

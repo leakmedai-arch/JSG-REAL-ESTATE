@@ -105,22 +105,26 @@ interface HeroSliderProps {
 }
 
 export const HeroSlider: React.FC<HeroSliderProps> = ({ onNavigate }) => {
-  const { sections, tables } = useSiteData();
+  const { sections, tables, updateHeroSliderPhoto } = useSiteData();
   const dbSlides = tables?.jsg_hero_slider;
-  const activeSlides = (dbSlides && dbSlides.length > 0) ? dbSlides.map((s: any, idx: number) => ({
-    id: s.id || idx + 1,
-    tagline: s.subtitle || 'LUXURY REAL ESTATE',
-    headline: s.title || 'Dubai Trophy Properties',
-    subheadline: s.subtitle || 'Exclusive Waterfront & Palm Jumeirah Estates',
-    propertyTitle: s.title || 'Signature Residence',
-    location: s.location || 'Dubai',
-    price: s.price || 'AED 10,000,000',
-    stats: s.stats || 'Prime Luxury',
-    image: s.image_url || 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=3840&q=95',
-    category: s.category || 'Luxury',
-    buttonTitle: s.cta1_text || 'Explore Properties',
-    ctaPath: s.cta1_link || '/buy'
-  })) : SLIDES;
+  const activeSlides = SLIDES.map((defaultSlide, idx) => {
+    const s = dbSlides?.[idx];
+    if (!s) return defaultSlide;
+    return {
+      ...defaultSlide,
+      tagline: s.subtitle || defaultSlide.tagline,
+      headline: s.title || defaultSlide.headline,
+      subheadline: s.subtitle || defaultSlide.subheadline,
+      propertyTitle: s.title || defaultSlide.propertyTitle,
+      location: s.location || defaultSlide.location,
+      price: s.price || defaultSlide.price,
+      stats: s.stats || defaultSlide.stats,
+      image: s.image_url || defaultSlide.image,
+      category: s.category || defaultSlide.category,
+      buttonTitle: s.cta1_text || defaultSlide.buttonTitle,
+      ctaPath: s.cta1_link || defaultSlide.ctaPath
+    };
+  });
 
   const [currentSlide, setCurrentSlide] = useState(0);
   const [searchTab, setSearchTab] = useState<'buy' | 'rent' | 'off-plan'>('buy');
@@ -135,6 +139,19 @@ export const HeroSlider: React.FC<HeroSliderProps> = ({ onNavigate }) => {
 
   const getSlideImage = (s: Slide) => {
     return sections.heroSliderPhotos?.[s.id] || sections.heroSliderPhotos?.[String(s.id)] || s.image;
+  };
+
+  const handleHeroPhotoUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = (event) => {
+      const result = event.target?.result as string;
+      if (result) {
+        updateHeroSliderPhoto(slide.id, result);
+      }
+    };
+    reader.readAsDataURL(file);
   };
 
   // Touch gesture tracking for mobile smooth swipe
